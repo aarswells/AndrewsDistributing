@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @for_brewer.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%=raw @for_brewer.title %>
+  </div>
+  
+  <div>
+    <h3>Ogg File</h3>
+    <%= link_to 'ogg_file', @for_brewer.ogg_file.url %>
+  </div>
+  
+  <div>
+    <h3>M4v File</h3>
+    <%= link_to 'm4v_file', @for_brewer.m4v_file.url %>
+  </div>
+  
+  <div>
+    <h3>Display Image</h3>
+    <%= image_fu @for_brewer.display_image, nil %>
+  </div>
+  
+  <div>
+    <h3>Text</h3>
+    <%=raw @for_brewer.text %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="for_brewers">
+    <% @for_brewers.each do |for_brewer| %>
+      <li>
+        <%= link_to for_brewer.title, for_brewer_url(for_brewer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

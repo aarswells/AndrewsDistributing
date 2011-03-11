@@ -1,0 +1,21 @@
+<% content_for :body_content_left do %>
+  <ul id="management">
+    <% @managements.each do |management| %>
+      <li>
+		<%= image_fu management.thumb_image, "112x112" %>
+        <span class="title"><%= management.title %></span><br />
+		<h2><%= management.name %></h2> <a href="#<%= management.position %>" class="fancy">Read More >></a><br />
+		<% if management.teaser %> <%=raw management.teaser %><% end %>
+		<div class="hide">
+			<div class="fancy_box" id="<%= management.position %>">
+				<%= image_fu management.main_image %>
+				<h2><%= management.name %></h2><span class="title"><%= management.title %></span><br />
+				<%=raw management.bio %>
+			</div>
+		</div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

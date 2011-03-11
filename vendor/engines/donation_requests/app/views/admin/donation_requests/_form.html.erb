@@ -1,0 +1,79 @@
+<% form_for [:admin, @donation_request] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @donation_request,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :event_region -%>
+    <%= f.text_field :event_region, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_name -%>
+    <%= f.text_field :event_name -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_location -%>
+    <%= f.text_field :event_location -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_address -%>
+    <%= f.text_area :event_address, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :expected_attendence -%>
+    <%= f.text_field :expected_attendence -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_contact_name -%>
+    <%= f.text_field :event_contact_name -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_contact_number -%>
+    <%= f.text_field :event_contact_number -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_contact_email -%>
+    <%= f.text_field :event_contact_email -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_concessionaire -%>
+    <%= f.text_field :event_concessionaire -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :event_concessionaire_phone -%>
+    <%= f.text_field :event_concessionaire_phone -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :charity_501c3 -%>
+    <%= f.text_field :charity_501c3 -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :wine_spirits_served -%>
+    <%= f.text_field :wine_spirits_served -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :additional_comments -%>
+    <%= f.text_area :additional_comments, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.donation_requests.donation_request.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @donation_request.event_region)
+              } %>
+<% end -%>

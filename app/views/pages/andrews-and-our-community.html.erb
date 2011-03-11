@@ -1,0 +1,15 @@
+<%= render :partial => "/shared/subnav" %>
+
+<%= render :partial => "/shared/content_page" %>
+
+<% @events = Event.order("position ASC")%>
+<img src="/images/recent.png" />
+  <ul id="events">
+    <% @events.each do |event| %>
+      <li>
+		<%= image_fu event.image, "200x600" %>
+        <h2><%= event.title%></h2>
+		<%=raw event.description %>
+      </li>
+    <% end %>
+  </ul>

@@ -1,0 +1,59 @@
+<% form_for [:admin, @whats_new_story] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @whats_new_story,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :thumbnail -%> (Must be 108 X 100)
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :thumbnail_id,
+      :image => @whats_new_story.thumbnail,
+      :toggle_image_display => false
+    } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :image_id,
+      :image => @whats_new_story.image,
+      :toggle_image_display => false
+    } %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :teaser -%>
+    <%= f.text_area :teaser, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :text -%>
+    <%= f.text_area :text, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :float, "Float Image" -%>
+    <%= f.check_box :float -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :active -%>
+    <%= f.check_box :active -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.whats_new_stories.whats_new_story.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @whats_new_story.title)
+              } %>
+<% end -%>

@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="portfolio_images">
+    <% @portfolio_images.each do |portfolio_image| %>
+      <li>
+        <%= link_to portfolio_image.title, portfolio_image_url(portfolio_image) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

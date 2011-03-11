@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    for_brewers:
+      title: For Brewers
+  admin:
+    for_brewers:
+      index:
+        create_new: Lag en ny For Brewer
+        reorder: Endre rekkefølgen på For Brewers
+        reorder_done: Ferdig å endre rekkefølgen For Brewers
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen For Brewers enda. Klikk på "Lag en ny For Brewer" for å legge til din første for brewer.
+      for_brewer:
+        view_live: Vis hvordan denne for brewer ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne for brewer
+        delete: Fjern denne for brewer permanent
+  for_brewers:
+    show:
+      other: Andre For Brewers

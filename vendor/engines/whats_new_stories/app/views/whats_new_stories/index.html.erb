@@ -1,0 +1,24 @@
+<% content_for :body_content_left do %>
+<%= javascript_include_tag "print" %>
+  <ul id="whats_new_stories">
+	<% @whats_new_stories = WhatsNewStory.all(:conditions => {:active => true}, :order => "position ASC")%>
+    <% @whats_new_stories.each do |whats_new_story| %>
+      <li>
+				<div class="thumb"><%= image_fu whats_new_story.thumbnail, '108x100' %></div>
+				<h2><%= whats_new_story.title %></h2> <a href="#<%= whats_new_story.position %>" class="whats-new-link">Read More >></a>
+				<% if whats_new_story.teaser %><%=raw whats_new_story.teaser %><% end %>
+				
+				<div class="hide">
+					<div class="fancy_box" id="<%= whats_new_story.position %>">
+						<a href="#" class="print">PRINT</a>
+						<div <% if whats_new_story.float == true %>class="left" <% end %>><%= image_fu whats_new_story.image %></div>
+						<h2><%= whats_new_story.title %></h2>
+						<%=raw whats_new_story.text %>
+					</div>
+				</div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

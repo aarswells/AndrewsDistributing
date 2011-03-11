@@ -1,0 +1,149 @@
+.home #body_content
+{
+  position:relative;
+  top:160px;
+}
+
+#page
+{
+  padding:0;
+}
+
+#header
+{
+  height:60px;
+}
+
+.left_nav
+{
+  padding:0;
+  left:0;
+}
+
+.banner
+{
+  left:0;
+}
+
+ul#management
+{
+  list-style-image:none;
+}
+
+ul#management li
+{
+  display:inline-block;
+}
+
+ul#management li a
+{
+  padding-bottom:12px;
+}
+
+#header_content
+{
+  position:relative;
+  z-index:1;
+}
+
+.at-a-glance #body_content p,.destination-beer #body_content p
+{
+  width:250px;
+}
+
+.beer-brands--2 .top_right_image
+{
+  background:url('/images/bottle_cap_IE.png') no-repeat;
+}
+
+.portfolio_image
+{
+  width:289px;
+  height:503px;
+}
+
+ul.subnav
+{
+  margin-bottom:10px;
+}
+
+ul.subnav li.last
+{
+  width:150px;
+}
+
+.core-values #optional_area
+{
+  position:relative;
+  top:55px;
+  left:-170px;
+}
+
+
+.core-values #body
+{
+  margin-bottom:150px;
+}
+
+img.core
+{
+  z-index:1000;
+}
+
+map#core
+{
+  z-index:25;
+}
+
+ul#events li
+{
+  list-style-type:none;
+  list-style-image:none;
+}
+
+a.close
+{
+  top:-20px;
+}
+
+table#donation
+{
+  width:500px;
+}
+
+table#inquiries label.error
+{
+  white-space:nowrap;
+  position:absolute;
+  left:0;
+  top:28px;
+}
+
+table#donation label.error
+{
+  white-space:nowrap;
+  position:absolute;
+  left:5px;
+  top:25px;
+}
+
+table#donation td
+{
+  position:relative;
+}
+
+table#inquiries td
+{
+  position:relative;
+}
+
+table#donation td.right label
+{
+  width:150px;
+  white-space:nowrap;
+}
+
+table#donation td.input
+{
+  width:350px;
+}

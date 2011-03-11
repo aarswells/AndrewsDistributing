@@ -1,0 +1,148 @@
+<%= render :partial => "/shared/subnav" %>
+<div class="image_block"></div>
+<%= render :partial => "/shared/content_page" %>
+
+<% @domestics = BeerBrand.all(:conditions => {:main_category => "Domestic"}, :order => "position ASC") %>
+<% @imports = BeerBrand.all(:conditions => {:main_category => "Imports"}, :order => "position ASC") %>
+<% @craft = BeerBrand.all(:conditions => {:main_category => "Specialty & Craft"}, :order => "position ASC") %>
+<% @non = BeerBrand.all(:conditions => {:main_category => "Non-Alcoholic"}, :order => "position ASC") %>
+
+<div class="brand_type">
+<img src="/images/domestic.png" />
+<a id="domestics" class="show expand" href="#"></a>
+</div>
+<div class="domestics">
+<h2>Premium</h2>
+<ul class="brands">
+<% @domestics.each do |brand| %>
+	<% if brand.sub_category == "Premium" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Near Premium</h2>
+<ul class="brands">
+<% @domestics.each do |brand| %>
+	<% if brand.sub_category == "Near Premium" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Below Premium</h2>
+<ul class="brands">
+<% @domestics.each do |brand| %>
+	<% if brand.sub_category == "Below Premium" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Malt</h2>
+<ul class="brands">
+<% @domestics.each do |brand| %>
+	<% if brand.sub_category == "Malt" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Innovative</h2>
+<ul class="brands">
+<% @domestics.each do |brand| %>
+	<% if brand.sub_category == "Innovative" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+</div>
+<div class="brand_type">
+<img src="/images/imports.png" />
+<a id="imports" class="show expand" href="#"></a>
+</div>
+<div class="imports">
+<h2>Mexican</h2>
+<ul class="brands">
+<% @imports.each do |brand| %>
+	<% if brand.sub_category == "Mexican" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>European</h2>
+<ul class="brands">
+<% @imports.each do |brand| %>
+	<% if brand.sub_category == "European" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>All Other Imports</h2>
+<ul class="brands">
+<% @imports.each do |brand| %>
+	<% if brand.sub_category == "All Other Imports" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+</div>
+<div class="brand_type">
+<img src="/images/specialty_craft.png" />
+<a id="specialty" class="show expand" href="#"></a>
+</div>
+<div class="specialty">
+<h2>Specialty</h2>
+<ul class="brands">
+<% @craft.each do |brand| %>
+	<% if brand.sub_category == "Specialty" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Craft</h2>
+<ul class="brands">
+<% @craft.each do |brand| %>
+	<% if brand.sub_category == "Craft" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Cider</h2>
+<ul class="brands">
+<% @craft.each do |brand| %>
+	<% if brand.sub_category == "Cider" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+</div>
+<div class="brand_type">
+<img src="/images/non-alcoholic.png" />
+<a id="non-alcoholic" class="show expand" href="#"></a>
+</div>
+<div class="non-alcoholic">
+<h2>Non-Alcoholic</h2>
+<ul class="brands">
+<% @non.each do |brand| %>
+	<% if brand.sub_category == "Non-Alcoholic" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+
+<h2>Red Bull</h2>
+<ul class="brands">
+<% @non.each do |brand| %>
+	<% if brand.sub_category == "Red Bull" %>
+		<li><%= image_fu brand.image %></li>
+	<% end %>
+<% end %>
+</ul>
+</div>
+<img class="small_destination" src="/images/destination_small.png" />
+<a class="learn" target="_blank" href="http://destinationbeer.com"></a>

@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    beer_brands:
+      title: Beer Brands
+  admin:
+    beer_brands:
+      index:
+        create_new: Maak een nieuwe Beer Brand
+        reorder: Wijzig de volgorde van de Beer Brands
+        reorder_done: Klaar met het wijzingen van de volgorde van de Beer Brands
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Beer Brands. Druk op 'Maak een nieuwe Beer Brand' om de eerste aan te maken.
+      beer_brand:
+        view_live: Bekijk deze beer brand op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze beer brand
+        delete: Verwijder deze beer brand voor eeuwig
+  beer_brands:
+    show:
+      other: Andere Beer Brands

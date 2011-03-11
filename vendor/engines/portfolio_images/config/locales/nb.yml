@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    portfolio_images:
+      title: Portfolio Images
+  admin:
+    portfolio_images:
+      index:
+        create_new: Lag en ny Portfolio Image
+        reorder: Endre rekkefølgen på Portfolio Images
+        reorder_done: Ferdig å endre rekkefølgen Portfolio Images
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Portfolio Images enda. Klikk på "Lag en ny Portfolio Image" for å legge til din første portfolio image.
+      portfolio_image:
+        view_live: Vis hvordan denne portfolio image ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne portfolio image
+        delete: Fjern denne portfolio image permanent
+  portfolio_images:
+    show:
+      other: Andre Portfolio Images

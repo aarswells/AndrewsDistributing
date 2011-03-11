@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    donation_requests:
+      title: Donation Requests
+  admin:
+    donation_requests:
+      index:
+        create_new: Maak een nieuwe Donation Request
+        reorder: Wijzig de volgorde van de Donation Requests
+        reorder_done: Klaar met het wijzingen van de volgorde van de Donation Requests
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Donation Requests. Druk op 'Maak een nieuwe Donation Request' om de eerste aan te maken.
+      donation_request:
+        view_live: Bekijk deze donation request op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze donation request
+        delete: Verwijder deze donation request voor eeuwig
+  donation_requests:
+    show:
+      other: Andere Donation Requests

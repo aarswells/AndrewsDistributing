@@ -1,0 +1,11 @@
+<img class="welcome" src="/images/welcome.png">
+
+<% home = HomepageImage.first(:order => "RANDOM()") %>
+
+<div class="homeImage">
+<%= image_fu home.image %>
+</div>
+
+<div class="home">
+<%= render :partial => "/shared/content_page" %>
+</div>

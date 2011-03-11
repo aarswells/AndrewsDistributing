@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    homepage_images:
+      title: Homepage Images
+  admin:
+    homepage_images:
+      index:
+        create_new: Lag en ny Homepage Image
+        reorder: Endre rekkefølgen på Homepage Images
+        reorder_done: Ferdig å endre rekkefølgen Homepage Images
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Homepage Images enda. Klikk på "Lag en ny Homepage Image" for å legge til din første homepage image.
+      homepage_image:
+        view_live: Vis hvordan denne homepage image ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne homepage image
+        delete: Fjern denne homepage image permanent
+  homepage_images:
+    show:
+      other: Andre Homepage Images

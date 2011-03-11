@@ -1,0 +1,61 @@
+<% content_for :body_content_left do %>
+  <div class='inquiries'>
+    <%=raw @page[Page.default_parts.first.to_sym] %>
+
+    <%= form_for @inquiry do |f| %>
+      <%= render :partial => "/shared/admin/error_messages",
+                 :locals => {
+                   :object => @inquiry,
+                   :include_object_name => true
+                 } %>
+<table id="inquiries">
+			<tr>
+				<td style="width:100px"></td>
+				<td><span class="yellow">*</span>Required Fields</td>
+				<td></td>
+				<td></td>
+			</tr>
+      <tr>
+        <td><label for="inquiry[name]"><span class="yellow">*</span>First Name:</label></td>
+        <td><%= f.text_field :name, :class => "required" %></td>
+        <td><label for="inquiry[last_name]"><span class="yellow">*</span>Last Name:</label></td>
+        <td><%= f.text_field :last_name, :class => "required" %></td>
+      </tr>
+      <tr>
+        <td><label for="inquiry[email]"><span class="yellow">*</span>Email:</label></td>
+        <td><%= f.text_field :email, :class => "required email" %></td>
+        <td><label for="inquiry[phone]"><span class="yellow">*</span>Phone:</label></td>
+        <td><%= f.text_field :phone, :class => "required phoneUS" %></td>
+      </tr>
+      <tr>
+				<td><label for="inquiry[company]">Company Name:<br /><span class="yellow">(optional)</span></label></td>
+        <td><%= f.text_field :company %></td>
+        <td><label for="inquiry[title]">Title:<br /><span class="yellow">(optional)</span></label></td>
+        <td><%= f.text_field :title %></td>
+      <tr>
+      <tr>
+				<td><label for="inquiry[site]">Company Website:<br /><span class="yellow">(optional)</span></label></td>
+        <td><%= f.text_field :site %></td>
+				<td></td>
+				<td></td>
+      <tr>
+      <tr>
+        <td><label for="inquiry[message]"><span class="yellow">*</span>Reason for Contacting:</label></td>
+        <td colspan="3" width="300"><%= f.text_area :message, :rows => 8, :class => "required" %></td>
+      </tr>
+      <tr>
+				<td></td>
+        <td><%= f.submit t('.send') %></td>
+				<td></td>
+				<td></td>
+        <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if RefinerySetting.find_or_set(:show_contact_privacy_link, false) %>
+      </tr>
+			<tr>
+				<td></td>
+				<td colspan="3"><div class="sent">Your email has been sent. Thank you.</div></td>
+			</tr>
+</table>
+    <% end %>
+  </div>
+<% end %>
+<%= render :partial => "/shared/content_page" %>

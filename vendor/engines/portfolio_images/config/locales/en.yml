@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    portfolio_images:
+      title: Portfolio Images
+  admin:
+    portfolio_images:
+      index:
+        create_new: Create a new Portfolio Image
+        reorder: Reorder Portfolio Images
+        reorder_done: Done Reordering Portfolio Images
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Portfolio Images yet. Click "Create a new Portfolio Image" to add your first portfolio image.
+      portfolio_image:
+        view_live: View this portfolio image live <br/><em>(opens in a new window)</em>
+        edit: Edit this portfolio image
+        delete: Remove this portfolio image forever
+  portfolio_images:
+    show:
+      other: Other Portfolio Images

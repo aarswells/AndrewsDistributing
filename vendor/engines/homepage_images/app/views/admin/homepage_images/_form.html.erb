@@ -1,0 +1,29 @@
+<% form_for [:admin, @homepage_image] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @homepage_image,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :image_id,
+      :image => @homepage_image.image,
+      :toggle_image_display => false
+    } %>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.homepage_images.homepage_image.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @homepage_image.title)
+              } %>
+<% end -%>

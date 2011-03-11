@@ -1,0 +1,14 @@
+<% content_for :body_content_left do %>
+<h2 class="event">Recent Events</h2>
+  <ul id="events">
+    <% @events.each do |event| %>
+      <li>
+		<%= event.image %>
+        <h2><%= event.title%></h2>
+		<%=raw event.description %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    managements:
+      title: Managements
+  admin:
+    managements:
+      index:
+        create_new: Lag en ny Management
+        reorder: Endre rekkefølgen på Managements
+        reorder_done: Ferdig å endre rekkefølgen Managements
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Managements enda. Klikk på "Lag en ny Management" for å legge til din første management.
+      management:
+        view_live: Vis hvordan denne management ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne management
+        delete: Fjern denne management permanent
+  managements:
+    show:
+      other: Andre Managements

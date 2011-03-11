@@ -1,0 +1,30 @@
+<% content_for :body_content_title do %>
+  <%= @homepage_image.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%=raw @homepage_image.title %>
+  </div>
+  
+  <div>
+    <h3>Image</h3>
+    <%= image_fu @homepage_image.image, nil %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="homepage_images">
+    <% @homepage_images.each do |homepage_image| %>
+      <li>
+        <%= link_to homepage_image.title, homepage_image_url(homepage_image) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

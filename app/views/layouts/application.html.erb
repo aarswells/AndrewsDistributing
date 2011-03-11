@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}, :locals => {:exclude_jquery => true}) -%> 
+  <%= render :partial => "/shared/head" %>
+  <body class="<%= request.path.split('/').join(" ") %>">
+    <%= site_bar -%>
+    <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+	<div class="left_shadow"></div>
+	<div class="right_shadow"></div>
+    <div id='page_container'>
+	<div class="banner"></div>
+      <div id='page'>
+        <div id='header'>
+		  <% logo = Logo.first(:order =>"position ASC") %>
+		  <div class="logo"><a href="/"><% if logo %><%= image_fu logo.image, "122x122"%><% end %></a></div>
+          <%= render :partial => "/shared/header" %>
+        </div>
+		<div class="left_nav">
+		<a href="#" class="for_brewers simple"></a>
+		<a href="#" class="for_retailers simple"></a>
+		<a href="/our-portfolio/destination-beer" class="about_beers"></a>
+		<a href="/whats_new_stories" class="whats_new">
+			<% story = WhatsNewStory.first(:order =>"position ASC", :conditions => {:active => true}) %>
+			<%= image_fu story.thumbnail, "120x100", :class => "whats_new_thumb" %>
+			<span class="whats_new_title"><%= story.title %></span>
+		</a>
+		</div>
+        <div id='body' class='clearfix'>
+		<div class="texas">
+			<div class="border">
+				<div class="title_image"></div>
+				<div class="top_right_image"></div>
+          		<%= yield %>
+			</div>
+        </div>
+		</div>
+      </div>
+	<div id='footer'>
+        	<%= render :partial => "/shared/footer" %>
+  </div>
+</div>
+		<div id="for_brewers" class="for_videos">
+			<div class="container">
+				<%= render :partial => "/shared/brewers" %>
+			</div>
+		</div>
+		
+		<div id="for_retailers" class="for_videos" style="display:none">
+			<div class="container">
+				<%= render :partial => "/shared/retailers" %>
+			</div>
+		</div>
+		
+		<%= render :partial => "/shared/vimeo" %>
+	<div class="overlay"></div>
+		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-2516254-2']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		
+  </body>
+</html>

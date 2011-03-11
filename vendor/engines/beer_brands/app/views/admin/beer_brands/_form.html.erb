@@ -1,0 +1,54 @@
+<% form_for [:admin, @beer_brand] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @beer_brand,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :image_id,
+      :image => @beer_brand.image,
+      :toggle_image_display => false
+    } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :main_category -%>
+    <select name="beer_brand[main_category]">
+    	<option <% if @beer_brand.main_category == "Domestic" %>selected=selected <% end %> value="Domestic">Domestic</option>
+    	<option <% if @beer_brand.main_category == "Imports" %>selected=selected <% end %> value="Imports">Imports</option>
+    	<option <% if @beer_brand.main_category == "Specialty & Craft" %>selected=selected <% end %> value="Specialty & Craft">Specialty & Craft</option>
+		<option <% if @beer_brand.main_category == "Non-Alcoholic" %>selected=selected <% end %> value="Non-Alcoholic">Non-Alcoholic</option>
+  	</select>
+  
+  </div>
+  
+  <div class='field'>
+    <%= f.label :sub_category -%>
+    <select name="beer_brand[sub_category]">
+    	<option <% if @beer_brand.sub_category == "Premium" %>selected=selected <% end %> value="Premium">Premium</option>
+    	<option <% if @beer_brand.sub_category == "Near Premium" %>selected=selected <% end %> value="Near Premium">Near Premium</option>
+    	<option <% if @beer_brand.sub_category == "Below Premium" %>selected=selected <% end %> value="Below Premium">Below Premium</option>
+		<option <% if @beer_brand.sub_category == "Malt" %>selected=selected <% end %> value="Malt">Malt</option>
+		<option <% if @beer_brand.sub_category == "Innovative" %>selected=selected <% end %> value="Innovative">Innovative</option>
+		<option <% if @beer_brand.sub_category == "Mexican" %>selected=selected <% end %> value="Mexican">Mexican</option>
+		<option <% if @beer_brand.sub_category == "European" %>selected=selected <% end %> value="European">European</option>
+		<option <% if @beer_brand.sub_category == "All Other Imports" %>selected=selected <% end %> value="All Other Imports">All Other Imports</option>
+		<option <% if @beer_brand.sub_category == "Specialty" %>selected=selected <% end %> value="Specialty">Specialty</option>
+		<option <% if @beer_brand.sub_category == "Craft" %>selected=selected <% end %> value="Craft">Craft</option>
+		<option <% if @beer_brand.sub_category == "Cider" %>selected=selected <% end %> value="Cider">Cider</option>
+		<option <% if @beer_brand.sub_category == "Non-Alcoholic" %>selected=selected <% end %> value="Non-Alcoholic">Non-Alcoholic</option>
+		<option <% if @beer_brand.sub_category == "Red Bull" %>selected=selected <% end %> value="Red Bull">Red Bull</option>
+  	</select>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.beer_brands.beer_brand.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @beer_brand.main_category)
+              } %>
+<% end -%>

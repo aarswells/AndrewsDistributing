@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    whats_new_stories:
+      title: Whats New Stories
+  admin:
+    whats_new_stories:
+      index:
+        create_new: Lag en ny Whats New Story
+        reorder: Endre rekkefølgen på Whats New Stories
+        reorder_done: Ferdig å endre rekkefølgen Whats New Stories
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Whats New Stories enda. Klikk på "Lag en ny Whats New Story" for å legge til din første whats new story.
+      whats_new_story:
+        view_live: Vis hvordan denne whats new story ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne whats new story
+        delete: Fjern denne whats new story permanent
+  whats_new_stories:
+    show:
+      other: Andre Whats New Stories

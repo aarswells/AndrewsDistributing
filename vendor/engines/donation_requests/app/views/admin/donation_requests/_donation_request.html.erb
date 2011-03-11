@@ -1,0 +1,17 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(donation_request) -%>">
+  <span class='title'>
+    <%= donation_request.event_region %> - <%= donation_request.event_name %>
+    <span class="preview">&nbsp;</span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag("eye.png"), edit_admin_donation_request_path(donation_request),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), admin_donation_request_path(donation_request),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :'data-confirm' => t('shared.admin.delete.message',
+        :title => donation_request.event_region
+      ),
+        :'data-method' => :delete %>
+  </span>
+</li>

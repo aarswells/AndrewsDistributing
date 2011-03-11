@@ -1,0 +1,29 @@
+<%= render :partial => "/shared/subnav" %>
+
+<% content_for :optional_area do %>
+<div id="integrity_hover" class="hover"></div>
+<div id="family_hover" class="hover"></div>
+<div id="trust_hover" class="hover"></div>
+<div id="accountability_hover" class="hover"></div>
+<div id="image_hover" class="hover"></div>
+<div id="dedication_hover" class="hover"></div>
+<div id="open_door_hover" class="hover"></div>
+<div id="team_hover" class="hover"></div>
+<div id="attitude_hover" class="hover"></div>
+<div class="circle">
+<img src="/images/blank.png" usemap="#Core" class="core" width="461" height="461" />
+<map id="core" name="Core">
+	<area alt="integrity" coords="232,119,271,127,309,152,331,186,340,230,331,270,307,306,273,328,231,337,191,329,155,304,132,272,123,224,129,191,154,152,187,127" shape="poly" class="integrity">
+	<area alt="family-health" coords="145,35,186,127,154,151,129,189,33,151,58,101,96,64" shape="poly" class="family">
+	<area alt="trust" nohref coords="308,32,270,126,232,118,187,126,148,35,201,18,257,18" shape="poly" class="trust">
+	<area alt="accountability" nohref coords="424,145,332,185,310,151,272,126,309,33,364,63,399,100" shape="poly" class="tab accountability">
+	<area alt="image" nohref coords="427,307,333,269,341,230,333,186,425,147,442,198,442,254" shape="poly" class="image">
+	<area alt="dedication-and-passion" nohref coords="315,424,275,329,307,307,333,271,427,309,402,362,357,402" shape="poly" class="dedication">
+	<area alt="open-door-open-mind" nohref coords="152,426,191,330,231,338,272,330,312,425,252,445,193,441" shape="poly" class="open_door">
+	<area alt="attitude" nohref coords="36,314,130,272,153,304,189,329,150,426,91,396,56,356" shape="poly" class="attitude">
+	<area alt="team-player" nohref coords="33,153,128,190,122,224,130,271,34,312,15,250,20,189" shape="poly" class="team">
+</map>
+</div>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

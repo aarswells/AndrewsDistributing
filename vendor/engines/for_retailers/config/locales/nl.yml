@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    for_retailers:
+      title: For Retailers
+  admin:
+    for_retailers:
+      index:
+        create_new: Maak een nieuwe For Retailer
+        reorder: Wijzig de volgorde van de For Retailers
+        reorder_done: Klaar met het wijzingen van de volgorde van de For Retailers
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen For Retailers. Druk op 'Maak een nieuwe For Retailer' om de eerste aan te maken.
+      for_retailer:
+        view_live: Bekijk deze for retailer op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze for retailer
+        delete: Verwijder deze for retailer voor eeuwig
+  for_retailers:
+    show:
+      other: Andere For Retailers

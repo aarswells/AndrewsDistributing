@@ -1,0 +1,54 @@
+<% form_for [:admin, @management] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @management,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :thumb_image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :thumb_image_id,
+      :image => @management.thumb_image,
+      :toggle_image_display => false
+    } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :main_image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :main_image_id,
+      :image => @management.main_image,
+      :toggle_image_display => false
+    } %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :teaser -%>
+    <%= f.text_area :teaser, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :bio -%>
+    <%= f.text_area :bio, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.managements.management.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @management.title)
+              } %>
+<% end -%>

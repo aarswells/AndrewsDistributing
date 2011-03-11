@@ -1,0 +1,35 @@
+<% content_for :body_content_title do %>
+  <%= @beer_brand.main_category %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Image</h3>
+    <%= image_fu @beer_brand.image, nil %>
+  </div>
+  
+  <div>
+    <h3>Main Category</h3>
+    <%=raw @beer_brand.main_category %>
+  </div>
+  
+  <div>
+    <h3>Sub Category</h3>
+    <%=raw @beer_brand.sub_category %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="beer_brands">
+    <% @beer_brands.each do |beer_brand| %>
+      <li>
+        <%= link_to beer_brand.main_category, beer_brand_url(beer_brand) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

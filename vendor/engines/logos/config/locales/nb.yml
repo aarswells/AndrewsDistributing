@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    logos:
+      title: Logos
+  admin:
+    logos:
+      index:
+        create_new: Lag en ny Logo
+        reorder: Endre rekkefølgen på Logos
+        reorder_done: Ferdig å endre rekkefølgen Logos
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Logos enda. Klikk på "Lag en ny Logo" for å legge til din første logo.
+      logo:
+        view_live: Vis hvordan denne logo ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne logo
+        delete: Fjern denne logo permanent
+  logos:
+    show:
+      other: Andre Logos

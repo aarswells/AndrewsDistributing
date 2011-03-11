@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="homepage_images">
+    <% @homepage_images.each do |homepage_image| %>
+      <li>
+        <%= link_to homepage_image.title, homepage_image_url(homepage_image) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,29 @@
+<% form_for [:admin, @for_brewer] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @for_brewer,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :vimeo_url, "URL to Vimeo Video" -%>
+    <%= f.text_field :vimeo_url -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :text -%>
+    <%= f.text_area :text, :rows => 20, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.for_brewers.for_brewer.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @for_brewer.title)
+              } %>
+<% end -%>

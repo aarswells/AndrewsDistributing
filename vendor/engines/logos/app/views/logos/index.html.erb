@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="logos">
+    <% @logos.each do |logo| %>
+      <li>
+        <%= link_to logo.title, logo_url(logo) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

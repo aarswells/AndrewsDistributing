@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      Donation Request Form Entry<br/>
+    </p>
+	<p>
+		Event Region: <%= @donation['event_region'] %><br />
+		Event Name: <%= @donation['event_name'] %><br />
+		Event Location: <%= @donation['event_location'] %><br />
+		Event Address: <%= @donation['event_address'] %><br />
+		Expected Attendence: <%= @donation['expected_attendence'] %>
+	</p>
+	<p>
+		Event Contact Name: <%= @donation['event_contact_name'] %><br />
+		Event Contact Number: <%= @donation['event_contact_number'] %><br />
+		<% if !@donation['event_contact_email'].empty? %>
+			Event Contact Email: <%= @donation['event_contact_email'] %><br />
+		<% end %>
+	</p>
+	<p>
+		Event Concessionaire: <%= @donation['event_concessionaire'] %><br />
+		Event Concessionaire Phone Number: <%= @donation['event_concessionaire_phone'] %><br />
+		Charity/501C3: <%= @donation['charity_501c3'] %><br />
+		Wine/Spirits Served: <%= @donation['wine_spirits_served'] %><br /><br />
+		<% if !@donation['additional_comments'].empty? %>
+		Additional Comments: <%= @donation['additional_comments'] %>
+		<% end %>
+	</p>
+
+  </body>
+</html>

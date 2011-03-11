@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    for_retailers:
+      title: For Retailers
+  admin:
+    for_retailers:
+      index:
+        create_new: Lag en ny For Retailer
+        reorder: Endre rekkefølgen på For Retailers
+        reorder_done: Ferdig å endre rekkefølgen For Retailers
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen For Retailers enda. Klikk på "Lag en ny For Retailer" for å legge til din første for retailer.
+      for_retailer:
+        view_live: Vis hvordan denne for retailer ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne for retailer
+        delete: Fjern denne for retailer permanent
+  for_retailers:
+    show:
+      other: Andre For Retailers

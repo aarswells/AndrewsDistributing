@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    portfolio_images:
+      title: Portfolio Images
+  admin:
+    portfolio_images:
+      index:
+        create_new: Maak een nieuwe Portfolio Image
+        reorder: Wijzig de volgorde van de Portfolio Images
+        reorder_done: Klaar met het wijzingen van de volgorde van de Portfolio Images
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Portfolio Images. Druk op 'Maak een nieuwe Portfolio Image' om de eerste aan te maken.
+      portfolio_image:
+        view_live: Bekijk deze portfolio image op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze portfolio image
+        delete: Verwijder deze portfolio image voor eeuwig
+  portfolio_images:
+    show:
+      other: Andere Portfolio Images

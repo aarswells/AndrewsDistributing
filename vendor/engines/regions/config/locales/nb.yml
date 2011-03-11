@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    regions:
+      title: Regions
+  admin:
+    regions:
+      index:
+        create_new: Lag en ny Region
+        reorder: Endre rekkefølgen på Regions
+        reorder_done: Ferdig å endre rekkefølgen Regions
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Regions enda. Klikk på "Lag en ny Region" for å legge til din første region.
+      region:
+        view_live: Vis hvordan denne region ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne region
+        delete: Fjern denne region permanent
+  regions:
+    show:
+      other: Andre Regions

@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    logos:
+      title: Logos
+  admin:
+    logos:
+      index:
+        create_new: Maak een nieuwe Logo
+        reorder: Wijzig de volgorde van de Logos
+        reorder_done: Klaar met het wijzingen van de volgorde van de Logos
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Logos. Druk op 'Maak een nieuwe Logo' om de eerste aan te maken.
+      logo:
+        view_live: Bekijk deze logo op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze logo
+        delete: Verwijder deze logo voor eeuwig
+  logos:
+    show:
+      other: Andere Logos

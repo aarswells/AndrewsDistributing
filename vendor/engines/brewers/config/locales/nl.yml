@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    brewers:
+      title: Brewers
+  admin:
+    brewers:
+      index:
+        create_new: Maak een nieuwe Brewer
+        reorder: Wijzig de volgorde van de Brewers
+        reorder_done: Klaar met het wijzingen van de volgorde van de Brewers
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Brewers. Druk op 'Maak een nieuwe Brewer' om de eerste aan te maken.
+      brewer:
+        view_live: Bekijk deze brewer op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze brewer
+        delete: Verwijder deze brewer voor eeuwig
+  brewers:
+    show:
+      other: Andere Brewers

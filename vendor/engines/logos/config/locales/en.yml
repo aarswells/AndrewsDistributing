@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    logos:
+      title: Logos
+  admin:
+    logos:
+      index:
+        create_new: Create a new Logo
+        reorder: Reorder Logos
+        reorder_done: Done Reordering Logos
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Logos yet. Click "Create a new Logo" to add your first logo.
+      logo:
+        view_live: View this logo live <br/><em>(opens in a new window)</em>
+        edit: Edit this logo
+        delete: Remove this logo forever
+  logos:
+    show:
+      other: Other Logos

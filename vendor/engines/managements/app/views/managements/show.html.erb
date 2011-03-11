@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @management.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%=raw @management.title %>
+  </div>
+  
+  <div>
+    <h3>Name</h3>
+    <%=raw @management.name %>
+  </div>
+  
+  <div>
+    <h3>Thumb Image</h3>
+    <%= image_fu @management.thumb_image, nil %>
+  </div>
+  
+  <div>
+    <h3>Main Image</h3>
+    <%= image_fu @management.main_image, nil %>
+  </div>
+  
+  <div>
+    <h3>Bio</h3>
+    <%=raw @management.bio %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="managements">
+    <% @managements.each do |management| %>
+      <li>
+        <%= link_to management.title, management_url(management) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

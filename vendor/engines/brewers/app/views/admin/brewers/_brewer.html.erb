@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(brewer) -%>">
+  <span class='title'>
+    <%= brewer.company %>
+    <span class="preview">&nbsp;</span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag("application_go.png"), brewer_url(brewer),
+        :title => t('.view_live'),
+        :target => "_blank" %>
+    <%= link_to refinery_icon_tag("application_edit.png"), edit_admin_brewer_path(brewer),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), admin_brewer_path(brewer),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :'data-confirm' => t('shared.admin.delete.message',
+        :title => brewer.company
+      ),
+        :'data-method' => :delete %>
+  </span>
+</li>

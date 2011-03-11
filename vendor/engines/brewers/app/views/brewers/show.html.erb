@@ -1,0 +1,40 @@
+<% content_for :body_content_title do %>
+  <%= @brewer.company %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>First Image</h3>
+    <%= image_fu @brewer.first_image, nil %>
+  </div>
+  
+  <div>
+    <h3>Second Image</h3>
+    <%= image_fu @brewer.second_image, nil %>
+  </div>
+  
+  <div>
+    <h3>Company</h3>
+    <%=raw @brewer.company %>
+  </div>
+  
+  <div>
+    <h3>Website Url</h3>
+    <%=raw @brewer.website_url %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="brewers">
+    <% @brewers.each do |brewer| %>
+      <li>
+        <%= link_to brewer.company, brewer_url(brewer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

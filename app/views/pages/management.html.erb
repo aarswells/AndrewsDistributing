@@ -1,0 +1,24 @@
+<%= render :partial => "/shared/subnav" %>
+
+<%= render :partial => "/shared/content_page" %>
+
+<% @managements = Management.order("position ASC")%>
+<ul id="management">
+  <% @managements.each do |management| %>
+    <li>
+		<%= image_fu management.thumb_image, "112x112" %>
+      <span class="title"><%= management.title %></span><br />
+		<h2><%= management.name %></h2> <a href="#<%= management.position %>" class="fancy">Read More >></a><br />
+				<% if management.teaser %> <%=raw management.teaser %><% end %>
+		<div class="hide">
+			<div class="fancy_box" id="<%= management.position %>">
+				<%= image_fu management.main_image %>
+				<h2><%= management.name %></h2><span class="title"><%= management.title %></span><br />
+				<div class="bio">
+				<%=raw management.bio %>
+				</div>
+			</div>
+		</div>
+    </li>
+  <% end %>
+</ul>

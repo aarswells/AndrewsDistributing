@@ -1,0 +1,47 @@
+<% retailers = ForRetailer.order("position ASC")%>
+	<div class="modal_titles">
+		<ul>
+			<% retailers.each_with_index do |retailer, i|%>
+						<li><a href="#" id="api_pause" class="<%= retailer.position %> simple <% if i==0%> active<% end %>"><%= retailer.title %></a></li>
+			<% end %>
+		</ul>
+	</div>
+		<img src="/images/forRetailers.png" class="modal_image"  />
+		<a href="#" class="close">BACK TO Main site <img src='/images/close.png' /></a>
+		<div class="image_slider retailer">
+		<div class="invisible"></div>
+		<% retailers.each_with_index do |retailer, i|%>
+		<% position = 550*i %>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('div.modal_titles a.<%= retailer.position %>').click(function() {
+			
+			if (!$('.image_slider.retailer.<%= retailer.id %>').hasClass('active'))
+			{
+				$('.image_slider.retailer .video_slide.active .text').fadeOut();
+				$('.image_slider.retailer div.video_slide').removeClass('active');
+				$('div.modal_titles a').removeClass('active');
+				$('div.modal_titles a.<%= retailer.position %>').addClass('active');
+				$('.image_slider.retailer div.video_slide.<%= retailer.position %>').addClass('active');
+
+				var position = <%= retailer.position %> * -550
+				  $('.image_slider.retailer').animate({						
+				    left: position
+				  }, 1000	, function() {
+						    // Animation complete.
+								$('.image_slider.retailer .video_slide.active .text').fadeIn();
+						  });
+				}
+				return false;
+			});
+		});
+		</script>
+		<div class="video_slide <%= retailer.position %> <% if i==0%> active<% end %>" style="left:<%= position %>px;">
+			<iframe id="retailer<%= retailer.position %>" src="<%= retailer.vimeo_url %>?js_api=1&amp;js_swf_id=retailer<%= retailer.position %>&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=ffc20e" width="525" height="296" frameborder="0"></iframe>
+			<div class="text">
+			<%=raw retailer.text %>
+			</div>
+		</div>
+		<%end%>
+	</div>
+	<a class="portal" target="_blank" href="http://cp.adntx.com/">Visit Our Customer Portal >></a>

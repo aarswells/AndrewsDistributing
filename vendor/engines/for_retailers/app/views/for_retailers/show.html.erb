@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @for_retailer.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%=raw @for_retailer.title %>
+  </div>
+  
+  <div>
+    <h3>Ogg File</h3>
+    <%= link_to 'ogg_file', @for_retailer.ogg_file.url %>
+  </div>
+  
+  <div>
+    <h3>M4v File</h3>
+    <%= link_to 'm4v_file', @for_retailer.m4v_file.url %>
+  </div>
+  
+  <div>
+    <h3>Display Image</h3>
+    <%= image_fu @for_retailer.display_image, nil %>
+  </div>
+  
+  <div>
+    <h3>Text</h3>
+    <%=raw @for_retailer.text %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="for_retailers">
+    <% @for_retailers.each do |for_retailer| %>
+      <li>
+        <%= link_to for_retailer.title, for_retailer_url(for_retailer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

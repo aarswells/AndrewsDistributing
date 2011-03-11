@@ -1,0 +1,7 @@
+<% if @page.parent %>
+<ul class="subnav">
+	<% @page.parent.children.each_with_index do |child, i| %>
+		<li class="<% if i==3 %>last<% end %><% if @page.title == child.title %> active<% end %>"><%= link_to child.title, child.url -%></li>
+	<% end %>
+</ul>
+<% end %>

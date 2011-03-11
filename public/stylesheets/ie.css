@@ -1,0 +1,48 @@
+#modalBoxFaderLayer
+{
+  filter:aplha(opacity=90) !important;
+}
+
+.donation_requests #body .border
+{
+    min-height:897px;
+}
+
+ul.subnav li.last
+{
+  list-style-image:none !important;
+  list-style-type:none !important;
+  clear:left;
+  background:none;
+}
+
+.the-andrews-story ul.subnav, .our-portfolio ul.subnav
+{
+  width:364px;
+  padding-right:236px;
+}
+
+#menu ul
+{
+  letter-spacing:0;
+}
+
+ul#management li a
+{
+  padding-bottom:9px;
+}
+
+#menu li#item_1 li.first
+{
+  width:110px;
+}
+
+.inquiries form textarea
+{
+  margin-right:250px;
+}
+
+#menu li#item_2
+{
+  width:130px;
+}

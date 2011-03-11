@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    donation_requests:
+      title: Donation Requests
+  admin:
+    donation_requests:
+      index:
+        create_new: Lag en ny Donation Request
+        reorder: Endre rekkefølgen på Donation Requests
+        reorder_done: Ferdig å endre rekkefølgen Donation Requests
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Donation Requests enda. Klikk på "Lag en ny Donation Request" for å legge til din første donation request.
+      donation_request:
+        view_live: Vis hvordan denne donation request ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne donation request
+        delete: Fjern denne donation request permanent
+  donation_requests:
+    show:
+      other: Andre Donation Requests

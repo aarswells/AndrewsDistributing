@@ -1,0 +1,82 @@
+<% form_for [:admin, @form_field], :url => { :action => "toggle_create"} do |f| -%>
+<style>
+table#required td
+{
+  border-bottom:1px #ccc solid;
+}
+
+table#required tr:last-child td
+{
+  border-bottom:none;
+}
+
+table#required label
+{
+  margin:0;
+}
+</style>
+
+
+<table id="required" cellspacing="0" cellpadding="5">
+<tr>
+  <td><%= f.label :event_name -%></td>
+  <td><%= f.check_box :event_name -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_location -%></td>
+  <td><%= f.check_box :event_location -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_address -%></td>
+  <td><%= f.check_box :event_address -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :expected_attendence -%></td>
+  <td><%= f.check_box :expected_attendence -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_contact_name -%></td>
+  <td><%= f.check_box :event_contact_name -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_contact_number -%></td>
+  <td><%= f.check_box :event_contact_number -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_contact_email -%></td>
+  <td><%= f.check_box :event_contact_email -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_concessionaire -%></td>
+  <td><%= f.check_box :event_concessionaire -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :event_concessionaire_phone -%></td>
+  <td><%= f.check_box :event_concessionaire_phone -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :charity_501c3 -%></td>
+  <td><%= f.check_box :charity_501c3 -%></td>
+</tr>
+
+<tr>
+  <td><%= f.label :additional_comments -%></td>
+  <td><%= f.check_box :additional_comments -%></td>
+</tr>
+
+<tr>
+  <td><%= f.submit "Save" -%></td>
+	<td></td>
+</tr>
+</table>
+
+<% end %>

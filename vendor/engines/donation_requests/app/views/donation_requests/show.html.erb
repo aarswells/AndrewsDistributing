@@ -1,0 +1,85 @@
+<% content_for :body_content_title do %>
+  <%= @donation_request.event_region %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Event Region</h3>
+    <%=raw @donation_request.event_region %>
+  </div>
+  
+  <div>
+    <h3>Event Name</h3>
+    <%=raw @donation_request.event_name %>
+  </div>
+  
+  <div>
+    <h3>Event Location</h3>
+    <%=raw @donation_request.event_location %>
+  </div>
+  
+  <div>
+    <h3>Event Address</h3>
+    <%=raw @donation_request.event_address %>
+  </div>
+  
+  <div>
+    <h3>Expected Attendence</h3>
+    <%=raw @donation_request.expected_attendence %>
+  </div>
+  
+  <div>
+    <h3>Event Contact Name</h3>
+    <%=raw @donation_request.event_contact_name %>
+  </div>
+  
+  <div>
+    <h3>Event Contact Number</h3>
+    <%=raw @donation_request.event_contact_number %>
+  </div>
+  
+  <div>
+    <h3>Event Contact Email</h3>
+    <%=raw @donation_request.event_contact_email %>
+  </div>
+  
+  <div>
+    <h3>Event Concessionaire</h3>
+    <%=raw @donation_request.event_concessionaire %>
+  </div>
+  
+  <div>
+    <h3>Event Concessionaire Phone</h3>
+    <%=raw @donation_request.event_concessionaire_phone %>
+  </div>
+  
+  <div>
+    <h3>Charity 501c3</h3>
+    <%=raw @donation_request.charity_501c3 %>
+  </div>
+  
+  <div>
+    <h3>Wine Spirits Served</h3>
+    <%=raw @donation_request.wine_spirits_served %>
+  </div>
+  
+  <div>
+    <h3>Additional Comments</h3>
+    <%=raw @donation_request.additional_comments %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="donation_requests">
+    <% @donation_requests.each do |donation_request| %>
+      <li>
+        <%= link_to donation_request.event_region, donation_request_url(donation_request) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

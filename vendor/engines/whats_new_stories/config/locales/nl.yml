@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    whats_new_stories:
+      title: Whats New Stories
+  admin:
+    whats_new_stories:
+      index:
+        create_new: Maak een nieuwe Whats New Story
+        reorder: Wijzig de volgorde van de Whats New Stories
+        reorder_done: Klaar met het wijzingen van de volgorde van de Whats New Stories
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Whats New Stories. Druk op 'Maak een nieuwe Whats New Story' om de eerste aan te maken.
+      whats_new_story:
+        view_live: Bekijk deze whats new story op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze whats new story
+        delete: Verwijder deze whats new story voor eeuwig
+  whats_new_stories:
+    show:
+      other: Andere Whats New Stories

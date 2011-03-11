@@ -1,0 +1,8 @@
+<%= render :partial => "/shared/subnav" %>
+
+<% portfolio = PortfolioImage.first(:order => "position ASC")%>
+
+<% if portfolio %>
+	<%= image_fu portfolio.image, '289x503', :class => 'portfolio_image' %>
+<% end %>
+<%= render :partial => "/shared/content_page" %>

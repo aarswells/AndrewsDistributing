@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    for_brewers:
+      title: For Brewers
+  admin:
+    for_brewers:
+      index:
+        create_new: Maak een nieuwe For Brewer
+        reorder: Wijzig de volgorde van de For Brewers
+        reorder_done: Klaar met het wijzingen van de volgorde van de For Brewers
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen For Brewers. Druk op 'Maak een nieuwe For Brewer' om de eerste aan te maken.
+      for_brewer:
+        view_live: Bekijk deze for brewer op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze for brewer
+        delete: Verwijder deze for brewer voor eeuwig
+  for_brewers:
+    show:
+      other: Andere For Brewers

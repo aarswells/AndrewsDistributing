@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    managements:
+      title: Managements
+  admin:
+    managements:
+      index:
+        create_new: Maak een nieuwe Management
+        reorder: Wijzig de volgorde van de Managements
+        reorder_done: Klaar met het wijzingen van de volgorde van de Managements
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Managements. Druk op 'Maak een nieuwe Management' om de eerste aan te maken.
+      management:
+        view_live: Bekijk deze management op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze management
+        delete: Verwijder deze management voor eeuwig
+  managements:
+    show:
+      other: Andere Managements

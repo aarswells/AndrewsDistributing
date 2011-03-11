@@ -1,0 +1,30 @@
+<% content_for :body_content_title do %>
+  <%= @region.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  
+  <div>
+    <h3>Title</h3>
+    <%=raw @region.title %>
+  </div>
+  
+  <div>
+    <h3>Email</h3>
+    <%=raw @region.email %>
+  </div>
+  
+<% end %>
+
+<% content_for :body_content_right do %>
+  <h2><%= t('.other') %></h2>
+  <ul id="regions">
+    <% @regions.each do |region| %>
+      <li>
+        <%= link_to region.title, region_url(region) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

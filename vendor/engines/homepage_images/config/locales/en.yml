@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    homepage_images:
+      title: Homepage Images
+  admin:
+    homepage_images:
+      index:
+        create_new: Create a new Homepage Image
+        reorder: Reorder Homepage Images
+        reorder_done: Done Reordering Homepage Images
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Homepage Images yet. Click "Create a new Homepage Image" to add your first homepage image.
+      homepage_image:
+        view_live: View this homepage image live <br/><em>(opens in a new window)</em>
+        edit: Edit this homepage image
+        delete: Remove this homepage image forever
+  homepage_images:
+    show:
+      other: Other Homepage Images

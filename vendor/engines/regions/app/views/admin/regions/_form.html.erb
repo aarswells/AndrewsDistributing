@@ -1,0 +1,25 @@
+<% form_for [:admin, @region] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @region,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+		<p>To use multiple email addresses, use a comma between them.</p>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.regions.region.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @region.title)
+              } %>
+<% end -%>

@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="beer_brands">
+    <% @beer_brands.each do |beer_brand| %>
+      <li>
+        <%= link_to beer_brand.main_category, beer_brand_url(beer_brand) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    beer_brands:
+      title: Beer Brands
+  admin:
+    beer_brands:
+      index:
+        create_new: Create a new Beer Brand
+        reorder: Reorder Beer Brands
+        reorder_done: Done Reordering Beer Brands
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Beer Brands yet. Click "Create a new Beer Brand" to add your first beer brand.
+      beer_brand:
+        view_live: View this beer brand live <br/><em>(opens in a new window)</em>
+        edit: Edit this beer brand
+        delete: Remove this beer brand forever
+  beer_brands:
+    show:
+      other: Other Beer Brands

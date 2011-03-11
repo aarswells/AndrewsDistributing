@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    for_brewers:
+      title: For Brewers
+  admin:
+    for_brewers:
+      index:
+        create_new: Create a new For Brewer
+        reorder: Reorder For Brewers
+        reorder_done: Done Reordering For Brewers
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no For Brewers yet. Click "Create a new For Brewer" to add your first for brewer.
+      for_brewer:
+        view_live: View this for brewer live <br/><em>(opens in a new window)</em>
+        edit: Edit this for brewer
+        delete: Remove this for brewer forever
+  for_brewers:
+    show:
+      other: Other For Brewers

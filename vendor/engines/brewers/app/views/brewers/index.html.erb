@@ -1,0 +1,18 @@
+<% content_for :body_content_left do %>
+<%= render :partial => "/shared/subnav" %>
+
+  <ul id="brewers">
+    <% @brewers.each do |brewer| %>
+      <li>
+	  <div class="images">
+		<%= image_fu brewer.first_image %>
+		<%= image_fu brewer.second_image %>
+	  </div>
+        <h2><%= brewer.company %></h2>
+		<a href="http://<%= brewer.website_url %>" target="_blank"><%= brewer.website_url %></a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

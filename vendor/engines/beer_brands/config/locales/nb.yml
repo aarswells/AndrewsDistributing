@@ -1,0 +1,19 @@
+nb:
+  plugins:
+    beer_brands:
+      title: Beer Brands
+  admin:
+    beer_brands:
+      index:
+        create_new: Lag en ny Beer Brand
+        reorder: Endre rekkefølgen på Beer Brands
+        reorder_done: Ferdig å endre rekkefølgen Beer Brands
+        sorry_no_results: Beklager! Vi fant ikke noen resultater.
+        no_items_yet: Det er ingen Beer Brands enda. Klikk på "Lag en ny Beer Brand" for å legge til din første beer brand.
+      beer_brand:
+        view_live: Vis hvordan denne beer brand ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne beer brand
+        delete: Fjern denne beer brand permanent
+  beer_brands:
+    show:
+      other: Andre Beer Brands

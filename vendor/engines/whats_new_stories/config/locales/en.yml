@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    whats_new_stories:
+      title: Whats New
+  admin:
+    whats_new_stories:
+      index:
+        create_new: Create a new Whats New Story
+        reorder: Reorder Whats New Stories
+        reorder_done: Done Reordering Whats New Stories
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Whats New Stories yet. Click "Create a new Whats New Story" to add your first whats new story.
+      whats_new_story:
+        view_live: View this whats new story live <br/><em>(opens in a new window)</em>
+        edit: Edit this whats new story
+        delete: Remove this whats new story forever
+  whats_new_stories:
+    show:
+      other: Other Whats New Stories

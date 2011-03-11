@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    homepage_images:
+      title: Homepage Images
+  admin:
+    homepage_images:
+      index:
+        create_new: Maak een nieuwe Homepage Image
+        reorder: Wijzig de volgorde van de Homepage Images
+        reorder_done: Klaar met het wijzingen van de volgorde van de Homepage Images
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Homepage Images. Druk op 'Maak een nieuwe Homepage Image' om de eerste aan te maken.
+      homepage_image:
+        view_live: Bekijk deze homepage image op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze homepage image
+        delete: Verwijder deze homepage image voor eeuwig
+  homepage_images:
+    show:
+      other: Andere Homepage Images

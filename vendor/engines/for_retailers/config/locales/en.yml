@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    for_retailers:
+      title: For Retailers
+  admin:
+    for_retailers:
+      index:
+        create_new: Create a new For Retailer
+        reorder: Reorder For Retailers
+        reorder_done: Done Reordering For Retailers
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no For Retailers yet. Click "Create a new For Retailer" to add your first for retailer.
+      for_retailer:
+        view_live: View this for retailer live <br/><em>(opens in a new window)</em>
+        edit: Edit this for retailer
+        delete: Remove this for retailer forever
+  for_retailers:
+    show:
+      other: Other For Retailers
