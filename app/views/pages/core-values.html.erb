@@ -1,27 +1,188 @@
 <%= render :partial => "/shared/subnav" %>
 
+<script type="text/javascript">
+<!--
+/////////// CORE VALUES /////////////
+
+function integrityHover() {
+    $("#integrity_hover").addClass("active_hover");
+}
+
+function integrityOut(){
+	$("#integrity_hover").removeClass("active_hover");
+}
+
+function integrityClick(){
+  $(".value").removeClass("active");
+  $("#integrity").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #integrity_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function familyHover() {
+    $("#family_hover").addClass("active_hover");
+}
+function familyOut() {
+	$("#family_hover").removeClass("active_hover");
+}
+
+function familyClick() {
+  $(".value").removeClass("active");
+  $("#family").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #family_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function trustHover() {
+    $("#trust_hover").addClass("active_hover");
+  }
+
+function trustOut() {
+	$("#trust_hover").removeClass("active_hover");
+}
+
+function trustClick() {
+  $(".value").removeClass("active");
+  $("#trust").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #trust_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function teamHover() {
+    $("#team_hover").addClass("active_hover");
+  }
+
+function teamOut() {
+	$("#team_hover").removeClass("active_hover");
+  }
+
+function teamClick() {
+  $(".value").removeClass("active");
+  $("#team").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #team_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function openHover() {
+    $("#open_door_hover").addClass("active_hover");
+  }
+function openOut() {
+	$("#open_door_hover").removeClass("active_hover");
+  }
+
+function openClick() {
+  $(".value").removeClass("active");
+  $("#open_door").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #open_door_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function dedicationHover() {
+    $("#dedication_hover").addClass("active_hover");
+  }
+
+function dedicationOut() {
+	$("#dedication_hover").removeClass("active_hover");
+  }
+
+function dedicationClick() {
+  $(".value").removeClass("active");
+  $("#dedication").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #dedication_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function attitudeHover() {
+    $("#attitude_hover").addClass("active_hover");
+  }
+
+function attitudeOut() {
+	$("#attitude_hover").removeClass("active_hover");
+  }
+
+
+function attitudeClick() {
+  $(".value").removeClass("active");
+  $("#attitude").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #attitude_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function imageHover() {
+    $("#image_hover").addClass("active_hover");
+  }
+
+function imageOut() {
+	$("#image_hover").removeClass("active_hover");
+  }
+
+
+function imageClick() {
+  $(".value").removeClass("active");
+  $("#image").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #image_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+
+function accountabilityHover() {
+    $("#accountability_hover").addClass("active_hover");
+  }
+
+function accountabilityOut() {
+	$("#accountability_hover").removeClass("active_hover");
+  }
+
+
+function accountabilityClick() {
+  $(".value").removeClass("active");
+  $("#accountability").addClass("active");
+  $('.core-values .hover').removeClass('active');
+  $(".core-values #accountability_hover").addClass("active");
+  //IE FIX
+  $(".core-values #body").css({'background':'url("/images/body_bg.png")'});
+}
+//-->
+</script>
+
+
 <% content_for :optional_area do %>
-<div id="integrity_hover" class="hover"></div>
-<div id="family_hover" class="hover"></div>
-<div id="trust_hover" class="hover"></div>
-<div id="accountability_hover" class="hover"></div>
-<div id="image_hover" class="hover"></div>
-<div id="dedication_hover" class="hover"></div>
-<div id="open_door_hover" class="hover"></div>
-<div id="team_hover" class="hover"></div>
-<div id="attitude_hover" class="hover"></div>
+<div id="integrity_hover" class="hover" onClick="integrityClick()"></div>
+<div id="family_hover" class="hover" onClick="familyClick()"></div>
+<div id="trust_hover" class="hover" onClick="trustClick()"></div>
+<div id="accountability_hover" class="hover" onClick="accountabilityClick()"></div>
+<div id="image_hover" class="hover" onClick="imageClick()"></div>
+<div id="dedication_hover" class="hover" onClick="dedicationClick()"></div>
+<div id="open_door_hover" class="hover" onClick="openClick()"></div>
+<div id="team_hover" class="hover" onClick="teamClick()"></div>
+<div id="attitude_hover" class="hover" onClick="attitudeClick()"></div>
 <div class="circle">
 <img src="/images/blank.png" usemap="#Core" class="core" width="461" height="461" />
 <map id="core" name="Core">
-	<area alt="integrity" coords="232,119,271,127,309,152,331,186,340,230,331,270,307,306,273,328,231,337,191,329,155,304,132,272,123,224,129,191,154,152,187,127" shape="poly" class="integrity">
-	<area alt="family-health" coords="145,35,186,127,154,151,129,189,33,151,58,101,96,64" shape="poly" class="family">
-	<area alt="trust" nohref coords="308,32,270,126,232,118,187,126,148,35,201,18,257,18" shape="poly" class="trust">
-	<area alt="accountability" nohref coords="424,145,332,185,310,151,272,126,309,33,364,63,399,100" shape="poly" class="tab accountability">
-	<area alt="image" nohref coords="427,307,333,269,341,230,333,186,425,147,442,198,442,254" shape="poly" class="image">
-	<area alt="dedication-and-passion" nohref coords="315,424,275,329,307,307,333,271,427,309,402,362,357,402" shape="poly" class="dedication">
-	<area alt="open-door-open-mind" nohref coords="152,426,191,330,231,338,272,330,312,425,252,445,193,441" shape="poly" class="open_door">
-	<area alt="attitude" nohref coords="36,314,130,272,153,304,189,329,150,426,91,396,56,356" shape="poly" class="attitude">
-	<area alt="team-player" nohref coords="33,153,128,190,122,224,130,271,34,312,15,250,20,189" shape="poly" class="team">
+		<area alt="integrity" coords="232,230,111" shape="circle" class="integrity" onMouseOver="integrityHover()" onMouseOut="integrityOut()" onClick="integrityClick()" />
+		<area alt="family-health" coords="145,35,186,127,154,151,129,189,33,151,58,101,96,64" shape="poly" class="family" onMouseOver="familyHover()" onMouseOut="familyOut()" onClick="familyClick()" />
+		<area alt="trust" nohref coords="308,32,270,126,232,118,187,126,148,35,201,18,257,18" shape="poly" class="trust" onMouseOver="trustHover()" onMouseOut="trustOut()" onClick="trustClick()" />
+		<area alt="accountability" nohref coords="424,145,332,185,310,151,272,126,309,33,364,63,399,100" shape="poly" class="accountability" onMouseOver="accountabilityHover()" onMouseOut="accountabilityOut()" onClick="accountabilityClick()" />
+		<area alt="image" nohref coords="427,307,333,269,341,230,333,186,425,147,442,198,442,254" shape="poly" class="image" onMouseOver="imageHover()" onMouseOut="imageOut()" onClick="imageClick()" />
+		<area alt="dedication-and-passion" nohref coords="315,424,275,329,307,307,333,271,427,309,402,362,357,402" shape="poly" class="dedication" onMouseOver="dedicationHover()" onMouseOut="dedicationOut()" onClick="dedicationClick()" />
+		<area alt="open-door-open-mind" nohref coords="152,426,191,330,231,338,272,330,312,425,252,445,193,441" shape="poly" class="open_door" onMouseOver="openHover()" onMouseOut="openOut()" onClick="openClick()" />
+		<area alt="attitude" nohref coords="36,314,130,272,153,304,189,329,150,426,91,396,56,356" shape="poly" class="attitude" onMouseOver="attitudeHover()" onMouseOut="attitudeOut()" onClick="attitudeClick()" />
+		<area alt="team-player" nohref coords="33,153,128,190,122,224,130,271,34,312,15,250,20,189" shape="poly" class="team" onMouseOver="teamHover()" onMouseOut="teamOut()" onClick="teamClick()" />
 </map>
 </div>
 <% end %>

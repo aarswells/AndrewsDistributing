@@ -25,6 +25,43 @@
   left:0;
 }
 
+#menu li
+{
+  padding:0 9px;
+}
+
+#menu li a
+{
+	display:inline-block;
+	padding:5px 12px;
+	position:relative;
+	z-index:3;
+	font-weight:600;
+}
+
+#menu li#item_1 li
+{
+  width:120px;
+  margin:0 0 0 5px;
+	padding:3px 5px 3px 7px;
+}
+
+#menu li li
+{
+  padding:7px 5px 3px 7px;
+}
+
+#menu li#item_2
+{
+  padding-right:0;
+  width:140px;
+}
+
+#menu li#item_3
+{
+  padding-right:5px;
+}
+
 ul#management
 {
   list-style-image:none;
@@ -146,4 +183,14 @@ table#donation td.right label
 table#donation td.input
 {
   width:350px;
+}
+
+#footer_content ul, #footer_content p
+{
+  margin-top:12px;
+}
+
+.integrity, .attitude, .team, .open_door, .image, .accountability, .trust, .family, .dedication
+{
+  display:inline-block;
 }

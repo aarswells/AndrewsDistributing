@@ -436,7 +436,7 @@ p
 ul.subnav
 {
 	margin:0;
-	padding:6px 36px 10px;
+	padding:6px 50px 10px 16px;
 	background:url('/images/subnav.png');
 	width:564px;
 	position:relative;
@@ -449,7 +449,7 @@ ul.subnav
 
 .our-community ul.subnav, .events ul.subnav, .donation_requests ul.subnav
 {
-	padding:10px 36px 4px;
+	padding:10px 50px 4px 16px;
 }
 
 ul.subnav li
@@ -678,6 +678,7 @@ ul.subnav li:first-child
 
 .core map area
 {
+  display:block;
 	cursor:pointer;
 }
 
@@ -689,6 +690,11 @@ ul.subnav li:first-child
 .core-values #body_content .active, .core-values #body_content .active_hover
 {
 	display:block !important;
+}
+
+.hover
+{
+  display:block;
 }
 
 /* management */
