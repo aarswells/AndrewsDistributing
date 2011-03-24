@@ -47,20 +47,12 @@ $(document).ready(function(){
 	
 	// jQuery Form Plugin options
 	var myFormOptions = {
-	  beforeSubmit:  formBeforeSubmit,
 	  success:       formAfterSubmit
 	};
 	
 	var myFormOptions2 = {
-	  beforeSubmit:  formBeforeSubmit2,
 	  success:       formAfterSubmit2
 	};
-
-	function formBeforeSubmit() {
-	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
-	  $.post("/contact", $("#new_inquiry").serialize());
-		return false;
-	}
 
 	function formAfterSubmit()  {
 	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE
@@ -69,11 +61,6 @@ $(document).ready(function(){
 	  return false;
 	}
 	
-	function formBeforeSubmit2() {
-	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
-	  $.post("/donation_requests", $("#new_donation_request").serialize());
-		return false;
-	}
 
 	function formAfterSubmit2()  {
 	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE
