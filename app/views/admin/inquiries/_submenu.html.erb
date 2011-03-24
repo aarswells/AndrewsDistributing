@@ -7,7 +7,7 @@
       <%= link_to t('.inbox'), admin_inquiries_url, :class => "email_icon" %>
     </li>
     <li <%= "class='selected'" if params[:action] == "spam" %>>
-      <% if @spam_count > 0  %>
+      <% if @spam_count > 0 %>
         <%= link_to "#{t('.spam')} (#{@spam_count})", spam_admin_inquiries_url, :class => "spam_icon" %>
       <% else %>
         <%= link_to t('.spam'), spam_admin_inquiries_url, :class => "spam_empty_icon" %>

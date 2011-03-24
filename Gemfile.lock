@@ -108,7 +108,7 @@ GEM
     refinerycms-i18n (0.9.8.12)
       refinerycms (>= 0.9.8)
       routing-filter (~> 0.1.6)
-    refinerycms-inquiries (0.9.8.10)
+    refinerycms-inquiries (0.9.9.9)
       filters_spam (~> 0.2)
     rmagick (2.12.2)
     routing-filter (0.1.7)
@@ -139,7 +139,7 @@ DEPENDENCIES
   refinerycms-for_retailers (= 1.0)!
   refinerycms-homepage_images (= 1.0)!
   refinerycms-i18n (~> 0.9.8.12)
-  refinerycms-inquiries (~> 0.9.8.8)
+  refinerycms-inquiries (~> 0.9.9.9)
   refinerycms-logos (= 1.0)!
   refinerycms-managements (= 1.0)!
   refinerycms-portfolio_images (= 1.0)!

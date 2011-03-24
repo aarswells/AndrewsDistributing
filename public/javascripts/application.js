@@ -59,7 +59,7 @@ $(document).ready(function(){
 	function formBeforeSubmit() {
 	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
 	  $.post("/contact", $("#new_inquiry").serialize());
-		return true;
+		return false;
 	}
 
 	function formAfterSubmit()  {
@@ -67,6 +67,12 @@ $(document).ready(function(){
     $("#new_inquiry")[0].reset();
 		$('.sent').show();
 	  return false;
+	}
+	
+	function formBeforeSubmit2() {
+	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
+	  $.post("/donation_requests", $("#new_donation_request").serialize());
+		return false;
 	}
 
 	function formAfterSubmit2()  {
