@@ -59,27 +59,27 @@ $(document).ready(function(){
 	function formBeforeSubmit() {
 	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
 	  $.post("/contact", $("#new_inquiry").serialize());
-		return false;
+		return true;
 	}
 
 	function formAfterSubmit()  {
 	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE
     $("#new_inquiry")[0].reset();
 		$('.sent').show();
-	  return true;
+	  return false;
 	}
 	
 	function formBeforeSubmit2() {
 	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
 	  $.post("/donation_requests", $("#new_donation_request").serialize());
-		return false;
+		return true;
 	}
 
 	function formAfterSubmit2()  {
 	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE
 	  $("#new_donation_request")[0].reset();
 		$('.sent').show();
-	  return true;
+	  return false;
 	}
 	
 	// Make form use jQuery Form Plugin
