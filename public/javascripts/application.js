@@ -68,12 +68,6 @@ $(document).ready(function(){
 		$('.sent').show();
 	  return false;
 	}
-	
-	function formBeforeSubmit2() {
-	  // PERFORM ACTIONS BEFORE FORM SUBMIT HERE
-	  $.post("/donation_requests", $("#new_donation_request").serialize());
-		return true;
-	}
 
 	function formAfterSubmit2()  {
 	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE

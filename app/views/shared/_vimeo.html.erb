@@ -30,6 +30,12 @@
             iframe.api( $(e.target).attr('id'), null );
         });
 
+				//Simple Buttons
+        $('.close').bind('click', {'player_id': player_id}, function(e){
+            var iframe = $('#'+e.data.player_id).get(0);
+            iframe.api( $(e.target).attr('id'), null );
+        });
+
         //API EVENT LISTENERS
         VimeoEmbed.setupAPIEventListeners($('#'+player_id).get(0));
     };
