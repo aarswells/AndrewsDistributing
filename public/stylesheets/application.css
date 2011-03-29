@@ -1185,6 +1185,7 @@ div#modalBox
 	list-style:none;
 	position:absolute;
 	background:#000;
+	z-index:10000;
 }
 
 .modal_titles ul li a, .brewer_titles ul li a
