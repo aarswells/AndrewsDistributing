@@ -194,7 +194,7 @@ so you can upgrade to newer versions easier. */
 ---------------------------------------------------------*/
 div.vjs-big-play-button {
   display: none; /* Start hidden */ z-index: 2;
-  position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; margin: -43px 0 0 -43px; text-align: center; vertical-align: center; cursor: pointer !important;
+  position: absolute; top: 50%; left: 255px; width: 80px; height: 80px; margin: -43px 0 0 -43px; text-align: center; vertical-align: center; cursor: pointer !important;
   border: 3px solid #fff; opacity: 0.9;
   border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px;
   
