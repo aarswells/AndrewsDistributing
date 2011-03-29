@@ -10,8 +10,33 @@
   </div>
   
   <div class='field'>
-    <%= f.label :vimeo_url, "URL to Vimeo Video" -%>
-    <%= f.text_field :vimeo_url -%>
+    <%= f.label :display_image -%>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {
+      :f => f,
+      :field => :display_image_id,
+      :image => @for_retailer.display_image,
+      :toggle_image_display => false
+    } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :ogg_file -%>
+
+    <%= render :partial => "/shared/admin/resource_picker", :locals => {
+      :f => f,
+      :field => :ogg_file_id,
+      :resource => @for_retailer.ogg_file,
+    } %>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :m4v_file -%>
+
+    <%= render :partial => "/shared/admin/resource_picker2", :locals => {
+      :f => f,
+      :field => :m4v_file_id,
+      :resource => @for_retailer.m4v_file,
+    } %>
   </div>
   
   <div class='field'>

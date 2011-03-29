@@ -10,6 +10,11 @@
   </div>
   
   <div>
+    <h3>Display Image</h3>
+    <%= image_fu @for_brewer.display_image, nil %>
+  </div>
+  
+  <div>
     <h3>Ogg File</h3>
     <%= link_to 'ogg_file', @for_brewer.ogg_file.url %>
   </div>
@@ -17,11 +22,6 @@
   <div>
     <h3>M4v File</h3>
     <%= link_to 'm4v_file', @for_brewer.m4v_file.url %>
-  </div>
-  
-  <div>
-    <h3>Display Image</h3>
-    <%= image_fu @for_brewer.display_image, nil %>
   </div>
   
   <div>

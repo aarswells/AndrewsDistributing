@@ -3,9 +3,9 @@ class CreateForRetailers < ActiveRecord::Migration
   def self.up
     create_table :for_retailers do |t|
       t.string :title
+      t.integer :display_image_id
       t.integer :ogg_file_id
       t.integer :m4v_file_id
-      t.integer :display_image_id
       t.text :text
       t.integer :position
 

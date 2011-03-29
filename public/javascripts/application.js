@@ -35,6 +35,12 @@ $(document).ready(function(){
 	$('body.whats_new_stories a#fancybox-close').append("BACK TO WHATS NEW");
 	$('body.management--2 a#fancybox-close').append("BACK TO MANAGEMENT");
 	
+	/////////////// Video ////////////////////////////////
+	$(".pause").click(function() {
+		$("video").trigger("pause")
+		return false;
+	});
+	
 	///////////// AJAX FORM SUBMITS //////////////////////
 	
 	$('.donation_requests .submit').click(function () {

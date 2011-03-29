@@ -37,7 +37,11 @@
 		});
 		</script>
 		<div class="video_slide <%= retailer.position %> <% if i==0%> active<% end %>" style="left:<%= position %>px;">
-			<iframe id="retailer<%= retailer.position %>" src="<%= retailer.vimeo_url %>?js_api=1&amp;js_swf_id=retailer<%= retailer.position %>&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=ffc20e" width="525" height="296" frameborder="0"></iframe>
+			<video id="retailer<%= retailer.position %>" style="width:525px;height:296px;" 
+			       poster="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Elephants_Dream.ogg/seek%3D13-Elephants_Dream.ogg.jpg">
+							<source type="video/mp4" src="http://andrews.heroku.com/system/resources/BAhbBlsHOgZmIj4yMDExLzAzLzI4LzEzLzM2LzQ3LzgyMi9CcmV3ZXJzQWNxdWlzaXRpb25fQWFyc19ILjI2NC5tNHY/BrewersAcquisition_Aars_H.264.m4v" >
+			        <source type="video/ogg" src="http://andrews.heroku.com/system/resources/BAhbBlsHOgZmIjMyMDExLzAxLzIyLzEyLzEwLzUyLzcwMS9CcmV3ZXJzQWNxdWlzaXRpb24ub2dn/BrewersAcquisition.ogg" >
+			      </video>
 			<div class="text">
 			<%=raw retailer.text %>
 			</div>
