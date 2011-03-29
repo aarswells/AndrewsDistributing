@@ -49,7 +49,7 @@
 		        data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
 		        <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
 		        <param name="allowfullscreen" value="true" />
-		        <param name="flashvars" value='config={"playlist":["<%= brewer.display_image.url %>", {"url": "<%= brewer.m4v_file.url %>","autoPlay":false,"autoBuffering":true}]}' />
+		        <param name="flashvars" value='config={"playlist":["<%= brewer.display_image.url %>", {"url": "http://andrews.heroku.com<%= brewer.m4v_file.url %>","autoPlay":false,"autoBuffering":true}]}' />
 		        <!-- Image Fallback. Typically the same as the poster image. -->
 		        <img src="<%= brewer.display_image.url %>" width="525" height="296" alt="Poster Image"
 		          title="No video playback capabilities." />
