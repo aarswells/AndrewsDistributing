@@ -47,7 +47,7 @@ so you can upgrade to newer versions easier. */
   position: absolute; margin: 0; opacity: 0.85; color: #fff;
   display: none; /* Start hidden */
   left: 0; right: 0; /* 100% width of video-js-box */ 
-  width: 100%;
+  width: 525px;
   bottom: 0px; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
   height: 35px; /* Including any margin you want above or below control items */
   padding: 0; /* Controls are absolutely position, so no padding necessary */
@@ -138,7 +138,7 @@ so you can upgrade to newer versions easier. */
 
 /* Time Display
 -------------------------------------------------------------------------------- */
-.vjs-controls .vjs-time-control { font-size: 10px; line-height: 1; font-weight: normal; font-family: Helvetica, Arial, sans-serif; left:165px }
+.vjs-controls .vjs-time-control { font-size: 10px; line-height: 1; font-weight: normal; font-family: Helvetica, Arial, sans-serif; }
 .vjs-controls .vjs-time-control span { line-height: 25px; /* Centering vertically */ }
 
 /* Volume
