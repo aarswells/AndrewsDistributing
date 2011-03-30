@@ -124,13 +124,14 @@ $(document).ready(function(){
 	});
 	
 	$(".pause").click(function() {
-		$("video").trigger("pause")
+		$("video").trigger("pause");
 		return false;
 	});
 	
 	$(".preview_image").click(function() {
-		$(this).siblings(".video-js-box").css({'display':'block'})
-		$(this).css({'display':'none'})
+		$(this).siblings(".video-js-box").css({'display':'block'});
+		$(this).css({'display':'none'});
+		$(this).siblings(".video-js-box").children("video").trigger("play");
 		return false;
 	});
 	
