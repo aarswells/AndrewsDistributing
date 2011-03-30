@@ -128,14 +128,6 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	$(".preview_image").click(function() {
-		$(this).siblings(".video-js-box").css({'display':'block'});
-		$(this).css({'display':'none'});
-		$(this).siblings(".video-js-box").children("video").trigger("play");
-		return false;
-	});
-	
-	
 	/////////////Beer Brands toggle//////////
 	$('a.show').toggle(function() {
 	  $(this).removeClass('expand');
