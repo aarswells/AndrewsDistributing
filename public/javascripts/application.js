@@ -129,7 +129,8 @@ $(document).ready(function(){
 	});
 	
 	$(".preview_image").click(function() {
-		$(this).siblings("video").css({'display':'block'})
+		$(this).siblings(".video-js-box").css({'display':'block'})
+		$(this).css({'display':'none'})
 		return false;
 	});
 	
