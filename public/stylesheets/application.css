@@ -1174,7 +1174,7 @@ div#modalBox
 	background:#000;
 	width:170px;
 	position:absolute;
-	z-index:20;
+	z-index:10000;
 	right:0;
 }
 
