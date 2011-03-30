@@ -10,7 +10,7 @@ REQUIRED STYLES (be careful overriding)
 .video-js-box { text-align: left; position: relative; line-height: 0 !important; margin: 0; padding: 0 !important; border: none !important; height:296px !important }
 
 /* Video Element */
-video.video-js { background-color: #000; position: relative; padding: 0; height:296px !important }
+video.video-js { background-color: #000; position: relative; padding: 0; height:296px !important; display:none; }
 
 .vjs-flash-fallback { display: block; }
 
