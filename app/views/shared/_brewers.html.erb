@@ -35,7 +35,7 @@
 				return false;
 			});
 			
-			$(".preview_image").click(function() {
+			$(".preview_image.<%= brewer.position %>").click(function() {
 				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" class="video-js" width="525" height="296" poster="<%= brewer.display_image.url %>" controls autobuffer=true style="height:296px !important"><source src="<%= brewer.m4v_file.url %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= brewer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /><!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. --><object id="flash_fallback_1" class="vjs-flash-fallback" width="525" height="296" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"><param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" /><param name="allowfullscreen" value="true" /><param name="wmode" VALUE="opaque"><param name="flashvars" value=\'config={"playlist":["<%= brewer.display_image.url %>", {"url": "http://andrews.heroku.com<%= brewer.m4v_file.url %>","autoPlay":false,"autoBuffering":true}]}\' /><!-- Image Fallback. Typically the same as the poster image. --><img src="<%= brewer.display_image.url %>" width="525" height="296" alt="Poster Image" title="No video playback capabilities." /></object></video></div>');
 				$(this).css({'display':'none'});
 				$(this).siblings(".video-js-box").children("video").trigger("play");
@@ -46,7 +46,7 @@
 		</script>
 		
 		<div class="video_slide <%= brewer.position %> <% if i==0%> active<% end %>" style="left:<%= position %>px;">
-			<img src="<%= brewer.display_image.url %>" width="525" height="296" class="preview_image" />
+			<img src="<%= brewer.display_image.url %>" width="525" height="296" class="preview_image <%= brewer.position %>" />
 			
 			<div class="text">
 			<%=raw brewer.text %>
