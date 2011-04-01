@@ -38,6 +38,21 @@
       :resource => @for_brewer.m4v_file,
     } %>
   </div>
+
+  <div class='field'>
+    <%= f.label :webm, "Web M" -%>
+
+    <%= render :partial => "/shared/admin/resource_picker3", :locals => {
+      :f => f,
+      :field => :webm_file_id,
+      :resource => @for_brewer.webm,
+    } %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :duration -%>
+    <%= f.text_field :duration -%>
+  </div>
   
   <div class='field'>
     <%= f.label :text -%>
