@@ -1282,6 +1282,11 @@ a.portal
 	top:306px;
 }
 
+.preview_image
+{
+	cursor:pointer;
+}
+
 /* Fake Modal Box */
 .overlay
 {
