@@ -2,12 +2,12 @@
 	<div class="modal_titles">
 		<ul>
 			<% retailers.each_with_index do |retailer, i|%>
-						<li><a href="#" id="api_pause" class="<%= retailer.position %> simple <% if i==0%> active<% end %>"><%= retailer.title %></a></li>
+						<li><a href="#" class="<%= retailer.position %> pause <% if i==0%> active<% end %>"><%= retailer.title %></a></li>
 			<% end %>
 		</ul>
 	</div>
 		<img src="/images/forRetailers.png" class="modal_image"  />
-		<a href="#" class="close" id="api_pause">BACK TO Main site <img src='/images/close.png' /></a>
+		<a href="#" class="close pause">BACK TO Main site <img src='/images/close.png' /></a>
 		<div class="image_slider retailer">
 		<div class="invisible"></div>
 		<% retailers.each_with_index do |retailer, i|%>
