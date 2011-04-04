@@ -125,7 +125,7 @@ $(document).ready(function(){
 	
 	$(".pause").click(function() {
 		$("video").trigger("pause");
-		$("video")[0].player.pause()
+		$("video")[0].player.pause();
 		return false;
 	});
 	
