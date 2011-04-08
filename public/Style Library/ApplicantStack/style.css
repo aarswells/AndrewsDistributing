@@ -123,3 +123,8 @@ fieldset
 {
   color:#fff;
 }
+
+[if ! IE] body
+{
+  background:transparent;
+}
