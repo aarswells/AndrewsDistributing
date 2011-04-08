@@ -4,7 +4,7 @@ body
 	background:none;
 	margin:0; 
 	padding:0;
-	background-color:#153064;
+	background:url("/images/body_bg.png");
 }
 
 a
@@ -122,9 +122,4 @@ ul
 fieldset
 {
   color:#fff;
-}
-
-[if ! IE] body
-{
-  background:transparent;
 }
