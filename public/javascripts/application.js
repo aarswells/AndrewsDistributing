@@ -127,7 +127,7 @@ $(document).ready(function(){
 		$("video").trigger("pause");
 		$f("*").each(function() {
 		  $(this).stop();
-	  }
+	  });
 		return false;
 	});
 	
