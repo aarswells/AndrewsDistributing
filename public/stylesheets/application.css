@@ -1278,7 +1278,7 @@ a.portal
 	position:relative;
 	padding:3px 0;
 	font-size:11px;
-	z-index:2;
+	z-index:10000;
 	top:306px;
 }
 
