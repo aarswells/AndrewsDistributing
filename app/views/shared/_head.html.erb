@@ -13,7 +13,7 @@
 	<%= javascript_include_tag "jquery", "CreateHTML5Elements" %>
 	<script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-	<%= javascript_include_tag "jquery.validate.min", "additional-methods", "form", "video", "flowplayer", "application" %>
+	<%= javascript_include_tag "jquery.validate.min", "additional-methods", "form", "flowplayer", "application" %>
   <link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
   <%= "<!--[if lte IE 8]>#{stylesheet_link_tag 'ie'}<![endif]-->".html_safe if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
   <%= "<!--[if IE 7]>#{stylesheet_link_tag 'ie7'}<![endif]-->".html_safe if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
@@ -23,6 +23,12 @@
   <%= yield :head %>
 	<script type="text/javascript" src="http://use.typekit.com/pwf4moo.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript" charset="utf-8">
+		if (!$.browser.webkit)
+	{
+		document.write('<script src="video.js" type="text/javascript" charset="utf-8"><\/script>');
+	}
+		</script>
 	<script type="text/javascript" charset="utf-8">
 	    // Add VideoJS to all video tags on the page when the DOM is ready
 	    VideoJS.setupAllWhenReady();
