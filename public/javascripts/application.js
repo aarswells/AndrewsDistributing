@@ -123,11 +123,12 @@ $(document).ready(function(){
 		return false;
 	});
 	
+	// a- tags with class "myPlayer" are transformed into video players
+	flowplayer("a.myPlayer", "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf");
+	
 	$(".pause").click(function() {
 		$("video").trigger("pause");
-		$f("*").each(function() {
-		  $(this).stop();
-	  });
+		$f().pause();
 		return false;
 	});
 	

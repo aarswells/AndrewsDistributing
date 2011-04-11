@@ -1282,6 +1282,12 @@ a.portal
 	top:306px;
 }
 
+a.myPlayer {
+	display:block;
+	width: 525px;
+	height:296px;
+}
+
 .preview_image
 {
 	cursor:pointer;
