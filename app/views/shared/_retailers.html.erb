@@ -38,6 +38,8 @@
 			$(".preview_image.retail.<%= retailer.position %>").click(function() {
 				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= retailer.duration %>" class="video-js" width="525" height="296" poster="<%= retailer.display_image.url %>" controls style="height:296px !important"><source src="<%= retailer.m4v_file.url %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= retailer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= retailer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /><!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. --><a class="myPlayer" href="http://andrews.heroku.com<%= retailer.m4v_file.url %>" style="background-image:url(<%= retailer.display_image.url %>)"><img src="<%= retailer.display_image.url %>" /></a></video></div>');
 				$(this).css({'display':'none'});
+				// a- tags with class "myPlayer" are transformed into video players
+				flowplayer("a.myPlayer", "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf");
 				// Add VideoJS to all video tags on the page when the DOM is ready
 				$(this).siblings(".video-js-box").children("video").trigger("play");
 				return false;
