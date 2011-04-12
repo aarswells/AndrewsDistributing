@@ -126,7 +126,6 @@ $(document).ready(function(){
 	
 	$(".pause").click(function() {
 		$("video").trigger("pause");
-		$f().pause();
 		return false;
 	});
 	
