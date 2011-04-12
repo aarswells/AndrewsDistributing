@@ -42,7 +42,7 @@
 				$(this).parent('.video_slide').append('</video>');
 				$(this).css({'display':'none'});
 				// Add VideoJS to all video tags on the page when the DOM is ready
-				$(this).siblings(".video-js-box").children("video").trigger("play");
+				$(this).children("video").trigger("play");
 				return false;
 			});
 		});
