@@ -37,8 +37,8 @@
 			
 			if ( $.browser.msie ) {
 				$(".preview_image.retail").css({'display':'none'});
-				$(".preview_image.retail.<%= retailer.position %>").parent('.video_slide').prepend('<a class="myPlayer <%= retailer.position %>" href="http://andrews.heroku.com<%= retailer.m4v_file.url %>" style="background:url(http://andrews.heroku.com<%= retailer.display_image.url %>)"><img src="http://andrews.heroku.com<%= retailer.display_image.url %>" /></a>');
-				flowplayer("a.myPlayer", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
+				$(".preview_image.retail.<%= retailer.position %>").parent('.video_slide').prepend('<a class="myPlayer<%= retailer.position %> flash_player" href="http://andrews.heroku.com<%= retailer.m4v_file.url %>" style="background:url(http://andrews.heroku.com<%= retailer.display_image.url %>)"><img src="http://andrews.heroku.com<%= retailer.display_image.url %>" /></a>');
+				flowplayer("a.myPlayer<%= retailer.position %>", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
 				// use the first frame of the video as a "splash image"
 				clip: {
 				autoPlay: false,

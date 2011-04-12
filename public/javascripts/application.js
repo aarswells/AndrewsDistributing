@@ -125,8 +125,7 @@ $(document).ready(function(){
 
 	if ( $.browser.msie ) {
     $(".pause").click(function() {
-			$f("a.myPlayer.1").pause();
-			$f("a.myPlayer.2").pause();
+			$f().pause();
 			return false;
 		});
   } else {
