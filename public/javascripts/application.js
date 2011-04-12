@@ -131,6 +131,8 @@ $(document).ready(function(){
   } else {
     $(".pause").click(function() {
 			$f().pause();
+			$f().stop();
+			$f("myPlayer").pause();
 			return false;
 		});
   }
