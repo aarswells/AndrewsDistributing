@@ -124,17 +124,15 @@ $(document).ready(function(){
 	});
 
 	if ( $.browser.msie ) {
-	  $(".pause").click(function() {
+    $(".pause").click(function() {
+			$f().pause();
+			return false;
+		});
+  } else {
+		$(".pause").click(function() {
   		$("video").trigger("pause");
   		return false;
   	});
-  } else {
-    $(".pause").click(function() {
-			$f().pause();
-			$f().stop();
-			$f("myPlayer").pause();
-			return false;
-		});
   }
 	
 	/////////////Beer Brands toggle//////////
