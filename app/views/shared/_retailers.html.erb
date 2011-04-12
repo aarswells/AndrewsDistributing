@@ -45,6 +45,11 @@
 				autoBuffering: false
 				}
 				});
+				
+				$(".pause").click(function() {
+					$f().pause();
+					return false;
+				});
 			}
 			
 			$(".preview_image.retail.<%= retailer.position %>").click(function() {
