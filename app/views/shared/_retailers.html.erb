@@ -35,8 +35,11 @@
 				return false;
 			});
 			
+			flowplayer("a.myPlayer.retail.<%= retailer.position %>", "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf");
+			
 			$(".preview_image.retail.<%= retailer.position %>").click(function() {
-				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= retailer.duration %>" class="video-js" width="525" height="296" poster="<%= retailer.display_image.url %>" controls style="height:296px !important"><source src="<%= retailer.m4v_file.url %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= retailer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= retailer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /><!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. --><object id="flash_fallback_1" class="vjs-flash-fallback" width="525" height="296" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf"><param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf" /><param name="allowfullscreen" value="true" /><param name="wmode" VALUE="opaque"><param name="flashvars" value=\'config={"playlist":["<%= retailer.display_image.url %>", {"url": "http://andrews.heroku.com<%= retailer.m4v_file.url %>","autoPlay":false,"autoBuffering":true}]}\' /><!-- Image Fallback. Typically the same as the poster image. --><img src="<%= retailer.display_image.url %>" width="525" height="296" alt="Poster Image" title="No video playback capabilities." /></object></video></div>');
+				$(this).parent('.video_slide').prepend('<!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= retailer.duration %>" class="video-js" width="525" height="296" poster="<%= retailer.display_image.url %>" controls style="height:296px !important"><source src="<%= retailer.m4v_file.url %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= retailer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= retailer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' />');
+				$(this).parent('.video_slide').append('</video>');
 				$(this).css({'display':'none'});
 				// Add VideoJS to all video tags on the page when the DOM is ready
 				$(this).siblings(".video-js-box").children("video").trigger("play");
@@ -45,7 +48,11 @@
 		});
 		</script>
 		<div class="video_slide <%= retailer.position %> <% if i==0%> active<% end %>" style="left:<%= position %>px;">
-			<img src="<%= retailer.display_image.url %>" width="525" height="296" class="preview_image retail <%= retailer.position %>" />
+			<a class="preview_image retail <%= retailer.position %> myPlayer"
+				href="http://andrews.heroku.com/<%= retailer.m4v_file.url %>"> 
+				<img src="<%= retailer.display_image.url %>" /> 
+			</a>
+
 			<div class="text">
 			<%=raw retailer.text %>
 			</div>
