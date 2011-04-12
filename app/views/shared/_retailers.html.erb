@@ -37,9 +37,15 @@
 			
 			if ( $.browser.msie ) {
 				alert("hi");
-				$(".preview_image.retail.<%= retailer.position %>").css({'display':'none'});
+				$(".preview_image.retail").css({'display':'none'});
 				$(".preview_image.retail.<%= retailer.position %>").parent('.video_slide').prepend('<a class="myPlayer" href="http://andrews.heroku.com<%= retailer.m4v_file.url %>"><img src="<%= retailer.display_image.url %>" /></a>');
-				flowplayer("a.myPlayer", "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf");
+				flowplayer("a.myPlayer", "http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf", {
+				// use the first frame of the video as a "splash image"
+				clip: {
+				autoPlay: false,
+				autoBuffering: false
+				}
+				});
 			}
 			
 			$(".preview_image.retail.<%= retailer.position %>").click(function() {
