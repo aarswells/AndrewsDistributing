@@ -123,11 +123,17 @@ $(document).ready(function(){
 		return false;
 	});
 
-	
-	$(".pause").click(function() {
-		$("video").trigger("pause");
-		return false;
-	});
+	if ( $.browser.msie ) {
+	  $(".pause").click(function() {
+  		$("video").trigger("pause");
+  		return false;
+  	});
+  } else {
+    $(".pause").click(function() {
+			$f().pause();
+			return false;
+		});
+  }
 	
 	/////////////Beer Brands toggle//////////
 	$('a.show').toggle(function() {
