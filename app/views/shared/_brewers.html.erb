@@ -48,7 +48,7 @@
 			}
 			
 			$(".preview_image.brewer.<%= brewer.position %>").click(function() {
-				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= brewer.duration %>" class="video-js" width="525" height="296" poster="<%= brewer.display_image.url %>" controls style="height:296px !important"><source src="<%= brewer.m4v_file.url %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= brewer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= brewer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
+				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= brewer.duration %>" class="video-js" width="525" height="296" poster="<%= brewer.display_image.url %>" controls style="height:296px !important"><source src="https://s3.amazonaws.com/andrews_distributing/<%= brewer.m4v_file.file_uid %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= brewer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= brewer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
 				$(this).css({'display':'none'});
 				// Add VideoJS to all video tags on the page when the DOM is ready
 				$(this).siblings(".video-js-box").children("video").trigger("play");
