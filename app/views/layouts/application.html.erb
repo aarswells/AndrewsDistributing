@@ -16,8 +16,8 @@
           <%= render :partial => "/shared/header" %>
         </div>
 		<div class="left_nav">
-		<a href="#" class="for_brewers simple"></a>
-		<a href="#" class="for_retailers simple"></a>
+		<a href="#" class="for_brewers pause"></a>
+		<a href="#" class="for_retailers pause"></a>
 		<a href="/our-portfolio/destination-beer" class="about_beers"></a>
 		<a href="/whats_new_stories" class="whats_new">
 			<% story = WhatsNewStory.first(:order =>"position ASC", :conditions => {:active => true}) %>
