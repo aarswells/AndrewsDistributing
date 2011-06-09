@@ -1,4 +1,4 @@
-<% #content_for :body_content_left do %>
+<% content_for :body_content_left do %>
   <div class='inquiries'>
     <%=raw @page[Page.default_parts.first.to_sym] %>
 
@@ -8,7 +8,7 @@
                    :object => @inquiry,
                    :include_object_name => true
                  } %>
-<table id="inquiries">
+<table style="display:none;" id="inquiries">
 			<tr>
 				<td style="width:100px"></td>
 				<td><span class="yellow">*</span>Required Fields</td>
@@ -57,5 +57,5 @@
 </table>
     <% end %>
   </div>
-<% #end %>
+<% end %>
 <%= render :partial => "/shared/content_page" %>
