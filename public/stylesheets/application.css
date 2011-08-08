@@ -1457,3 +1457,12 @@ ul#whats_new_stories li
 	margin:14px 0 0;
 	font-size:11px;
 }
+
+#footer_content .footer_logo
+{
+  float:left;
+  margin-right:10px;
+  height:25px;
+  position:relative;
+  top:-7px;
+}
