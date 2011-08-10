@@ -755,6 +755,7 @@ ul#management li .title, ul#whats_new_stories li .title
 {
 	position:relative;
 	top:18px;
+	white-space:nowrap;
 }
 
 .management--2 #fancybox-content p
