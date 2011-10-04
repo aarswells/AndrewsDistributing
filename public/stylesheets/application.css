@@ -1270,8 +1270,6 @@ a.close img
 a.portal
 {
 	display:inline-block;
-	border-top:#ffc20e solid 1px;
-	border-bottom:#ffc20e solid 1px;
 	color:#ffc20e;
 	width:525px;
 	text-transform:uppercase;
