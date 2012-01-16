@@ -1,0 +1,23 @@
+en:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    alerts:
+      title: Alerts
+  admin:
+    alerts:
+      index:
+        create_new: Create a new Alert
+        reorder: Reorder Alerts
+        reorder_done: Done Reordering Alerts
+        sorry_no_results: Sorry! There are no results found.
+        no_items_yet: There are no Alerts yet. Click "Create a new Alert" to add your first alert.
+      alert:
+        view_live: View this alert live <br/><em>(opens in a new window)</em>
+        edit: Edit this alert
+        delete: Remove this alert forever
+  alerts:
+    show:
+      other: Other Alerts

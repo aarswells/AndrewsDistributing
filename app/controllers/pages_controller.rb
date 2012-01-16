@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def home
+    @alerts = Alert.where(["start_date < ? AND end_date > ?", Time.now, Time.now]).order("start_date")
     error_404 unless (@page = Page.find_by_link_url("/", :include => [:parts, :slugs])).present?
   end
 
@@ -17,6 +18,8 @@ class PagesController < ApplicationController
   
   
   def show
+    @alerts = Alert.where(["start_date < ? AND end_date > ?", Time.now, Time.now]).order("start_date")
+    
     @page = if params[:path]
       Page.find(params[:path].split('/').last, :include => [:parts, :slugs])
     else

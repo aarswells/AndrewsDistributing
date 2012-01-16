@@ -1,0 +1,34 @@
+<% form_for [:admin, @alert] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+    :object => @alert,
+    :include_object_name => true
+  } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :message -%>
+    <%= f.text_area :message, :rows => 3, :class => 'wymeditor widest' -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :start_date -%>
+    <%= f.datetime_select :start_date -%>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :end_date -%>
+    <%= f.datetime_select :end_date -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('admin.alerts.alert.delete'),
+                :delete_confirmation => t('shared.admin.delete.message', :title => @alert.title)
+              } %>
+<% end -%>

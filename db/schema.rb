@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110401184848) do
+ActiveRecord::Schema.define(:version => 20120116175010) do
+
+  create_table "alerts", :force => true do |t|
+    t.string   "title"
+    t.text     "message"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "alerts", ["id"], :name => "index_alerts_on_id"
 
   create_table "beer_brands", :force => true do |t|
     t.integer   "image_id"

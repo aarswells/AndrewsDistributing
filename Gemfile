@@ -71,3 +71,4 @@ gem 'refinerycms-homepage_images', '1.0', :path => 'vendor/engines', :require =>
 gem 'refinerycms-whats_new_stories', '1.0', :path => 'vendor/engines', :require => 'whats_new_stories'
 gem 'refinerycms-for_retailers', '1.0', :path => 'vendor/engines', :require => 'for_retailers'
 gem 'refinerycms-for_brewers', '1.0', :path => 'vendor/engines', :require => 'for_brewers'
+gem 'refinerycms-alerts', '1.0', :path => 'vendor/engines', :require => 'alerts'

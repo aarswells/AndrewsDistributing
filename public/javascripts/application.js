@@ -35,6 +35,27 @@ $(document).ready(function(){
 	$('body.whats_new_stories a#fancybox-close').append("BACK TO WHATS NEW");
 	$('body.management--2 a#fancybox-close').append("BACK TO MANAGEMENT");
 	
+	////////////// ALERT TICKER BOX //////////////////////
+	
+	var alert_width = 0;
+	$(".alert_box .inner ul li").each(function() {
+		alert_width += $(this).width();
+	});
+		
+	alert_width += 925;
+	
+	reset_ticker();
+	
+	function reset_ticker() {
+		$(".alert_box .inner ul").css({"left":"925px"});
+		$(".alert_box .inner ul").animate({
+			left: "-="+alert_width
+			}, {"duration": 20000, easing:"linear", complete: function() {
+				reset_ticker();
+			}
+		});
+	}
+	
 	///////////// AJAX FORM SUBMITS //////////////////////
 	
 	$('.donation_requests .submit').click(function () {

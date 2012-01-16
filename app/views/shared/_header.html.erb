@@ -7,3 +7,15 @@
                :css => 'menu'
              } -%>
 </div>
+
+<% if @alerts %>
+  <div class="alert_box clearfix">
+    <div class="inner">
+      <ul>
+        <% @alerts.each do |alert| %> 
+          <li><%=raw alert.message %></li>
+        <% end %> 
+      </ul>
+    </div>
+  </div>
+<% end %>

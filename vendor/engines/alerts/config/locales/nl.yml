@@ -1,0 +1,19 @@
+nl:
+  plugins:
+    alerts:
+      title: Alerts
+  admin:
+    alerts:
+      index:
+        create_new: Maak een nieuwe Alert
+        reorder: Wijzig de volgorde van de Alerts
+        reorder_done: Klaar met het wijzingen van de volgorde van de Alerts
+        sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+        no_items_yet: Er zijn nog geen Alerts. Druk op 'Maak een nieuwe Alert' om de eerste aan te maken.
+      alert:
+        view_live: Bekijk deze alert op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze alert
+        delete: Verwijder deze alert voor eeuwig
+  alerts:
+    show:
+      other: Andere Alerts
