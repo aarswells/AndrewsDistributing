@@ -7,7 +7,7 @@
                :css => 'menu'
              } -%>
 </div>
-
+<% @alerts = Alert.where(["start_date < ? AND end_date > ?", Time.now, Time.now]).order("start_date") %>
 <% if !@alerts.empty? %>
   <div class="alert_box clearfix">
     <div class="inner">
