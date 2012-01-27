@@ -5,6 +5,7 @@ Refinery::Application.routes.draw do
   filter(:refinery_locales) if defined?(RoutingFilter::RefineryLocales) # optionally use i18n.
 
   root :to => 'pages#home'
+  match 'heartbeat', to: proc {[200, {} ''.chars]}
 
   scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
     match 'donation/toggle' => 'donation_requests#toggle'
