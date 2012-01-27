@@ -72,6 +72,7 @@ GEM
     mime-types (1.17.2)
     moretea-awesome_nested_set (1.4.3.1)
       activerecord (~> 3.0.0)
+    newrelic_rpm (3.3.1)
     polyglot (0.3.3)
     rack (1.2.5)
     rack-cache (0.5.3)
@@ -133,6 +134,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3
+  newrelic_rpm
   rails (= 3.0.3)
   refinerycms (~> 0.9.8.9)
   refinerycms-alerts (= 1.0)!

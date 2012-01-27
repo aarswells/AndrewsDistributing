@@ -33,6 +33,7 @@ gem 'aws-s3', :require => 'aws/s3'
 
 # Specify the Refinery CMS core:
 gem 'refinerycms',              '~> 0.9.8.9'
+gem 'newrelic_rpm'
 
 # Specify additional Refinery CMS Engines here (all optional):
 gem 'refinerycms-inquiries',    '~> 0.9.9.9'
