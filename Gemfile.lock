@@ -126,7 +126,7 @@ GEM
       polyglot (>= 0.3.1)
     truncate_html (0.4.0)
     tzinfo (0.3.31)
-    will_paginate (3.0.2)
+    will_paginate (3.0.pre)
     xml-simple (1.1.1)
 
 PLATFORMS
@@ -154,3 +154,4 @@ DEPENDENCIES
   refinerycms-whats_new_stories (= 1.0)!
   rmagick (~> 2.12.0)
   sqlite3-ruby
+  will_paginate (= 3.0.pre)
