@@ -8,6 +8,7 @@ class ForBrewer < ActiveRecord::Base
   belongs_to :display_image, :class_name => 'Image'
   belongs_to :ogg_file, :class_name => 'Resource'
   belongs_to :m4v_file, :class_name => 'Resource'
+  belongs_to :webm_file, :class_name => 'Resource'
 
 
 end
