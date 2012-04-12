@@ -39,12 +39,12 @@
     } %>
   </div>
   <div class='field'>
-    <%= f.label :webm_file, "Web M" -%>
+    <%= f.label :webm, "Web M" -%>
 
     <%= render :partial => "/shared/admin/resource_picker3", :locals => {
       :f => f,
       :field => :webm_file_id,
-      :resource => @for_retailer.webm_file,
+      :resource => @for_retailer.webm,
     } %>
   </div>
 
