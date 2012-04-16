@@ -1,5 +1,4 @@
 <ul id='sortable_list'>
-  <% @beer_brands = BeerBrand.find(:all, :order => "main_category ASC, position ASC") %>
-  <%= render :partial => 'beer_brand', :collection => @beer_brands %>
+  <%= render :partial => 'beer_brand', :collection => BeerBrand.find(:all, :order => "main_category ASC, position ASC") %>
 </ul>
 <%= render :partial => "/shared/admin/sortable_list", :locals => {:continue_reordering => (defined?(continue_reordering) ? continue_reordering : true)} %>
