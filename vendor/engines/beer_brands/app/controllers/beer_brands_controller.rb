@@ -20,7 +20,7 @@ class BeerBrandsController < ApplicationController
 protected
 
   def find_all_beer_brands
-    @beer_brands = BeerBrand.find(:all, :order => "position ASC")
+    @beer_brands = BeerBrand.find(:all, :order => "main_category ASC, position ASC")
   end
 
   def find_page
