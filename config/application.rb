@@ -1,7 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-
+ENV['S3_KEY']='AKIAJTRS34YVOXN6K5YA'
+ENV['S3_SECRET']='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'
+ENV['S3_BUCKET']='andrews_distributing'
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)

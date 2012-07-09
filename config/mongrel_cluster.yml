@@ -1,0 +1,8 @@
+--- 
+address: 0.0.0.0
+pid_file: tmp/pids/mongrel.pid
+log_file: log/mongrel.log
+port: "3000"
+cwd: /home/deploy/www/AndrewsDistributing
+environment: production
+servers: 1
