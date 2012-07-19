@@ -4,7 +4,7 @@
 $(document).ready(function(){
 	if ( $.browser.msie ) {
 		$(".story").css({'display':'none'});
-		$(".story").parent('.holder').prepend('<a class="story_player" href="https://s3.amazonaws.com/andrews_distributing/Working-for-Andrews.m4v" ><img src="/system/images/BAhbBlsHOgZmIi4yMDExLzA0LzA4LzA5LzQzLzEwLzI2NC9Xb3JrQXRBbmRyZXdzLmpwZw/WorkAtAndrews.jpg" /></a>');
+		$(".story").parent('.holder').prepend('<a class="story_player" href="/system/Working-for-Andrews.m4v" ><img src="/system/images/BAhbBlsHOgZmIi4yMDExLzA0LzA4LzA5LzQzLzEwLzI2NC9Xb3JrQXRBbmRyZXdzLmpwZw/WorkAtAndrews.jpg" /></a>');
 		flowplayer(".story_player", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
 		// use the first frame of the video as a "splash image"
 		clip: {

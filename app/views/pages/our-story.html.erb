@@ -7,7 +7,7 @@
 $(document).ready(function(){
 	if ( $.browser.msie ) {
 		$(".story").css({'display':'none'});
-		$(".story").parent('.holder').prepend('<a class="story_player" href="http://andrews.heroku.com/system/resources/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEyLzUzLzM5LzkzNC9Db21wYW55SGlzdF81MjV4Mjk2Lm1vdi5tNHY/CompanyHist_525x296.mov.m4v" ><img src="/system/images/BAhbBlsHOgZmIi8yMDExLzA0LzA4LzA5LzQzLzA1Lzk2MS9Db21wYW55SGlzdG9yeS5qcGc/CompanyHistory.jpg" /></a>');
+		$(".story").parent('.holder').prepend('<a class="story_player" href="/system/resources/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEyLzUzLzM5LzkzNC9Db21wYW55SGlzdF81MjV4Mjk2Lm1vdi5tNHY/CompanyHist_525x296.mov.m4v" ><img src="/system/images/BAhbBlsHOgZmIi8yMDExLzA0LzA4LzA5LzQzLzA1Lzk2MS9Db21wYW55SGlzdG9yeS5qcGc/CompanyHistory.jpg" /></a>');
 		flowplayer(".story_player", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
 		// use the first frame of the video as a "splash image"
 		clip: {

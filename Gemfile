@@ -8,8 +8,6 @@ gem 'will_paginate', '3.0.pre'
 
 gem  'sqlite3'
 gem 'taps'
-gem 'mongrel'
-gem 'mongrel_cluster'
 gem 'fog'
 
 # Use unicorn as the web server
@@ -26,7 +24,6 @@ gem 'fog'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'aws-s3', :require => 'aws/s3'
-gem 'heroku'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
