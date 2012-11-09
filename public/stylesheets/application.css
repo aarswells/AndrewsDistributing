@@ -128,7 +128,7 @@ p
 {
 	background:url('../images/body_bg.png');
 	width:650px;
-	margin:20px 0 50px;
+	margin:20px 0 70px;
 	display:inline-block;
 }
 
@@ -1480,6 +1480,7 @@ ul#whats_new_stories li
 	width:940px;
 	margin:0 auto;
 	text-transform:uppercase;
+  position: relative;
 }
 
 #footer_content ul
@@ -1510,4 +1511,11 @@ ul#whats_new_stories li
   margin-right:10px;
   position:relative;
   top:-18px;
+}
+
+
+img#brandBuilding {
+  position: absolute;
+  right: 88px;
+  bottom: -5px;
 }
