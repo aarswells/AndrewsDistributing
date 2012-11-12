@@ -1498,11 +1498,13 @@ ul#whats_new_stories li
 	margin-right:20px;
 }
 
-#footer_content p.copy
-{
-	float:right;
-	margin:14px 0 0;
-	font-size:11px;
+#footer_content p.copy {
+  float: right;
+  margin: 14px 0px 0px;
+  font-size: 11px;
+  font-family: "proxima-nova-1","proxima-nova-2",sans-serif;
+  letter-spacing: 0;
+  width: 405px;
 }
 
 #footer_content .footer_logo
