@@ -13,11 +13,29 @@ class DonationRequestsController < ApplicationController
 def create
   @donation_request = DonationRequest.new(params[:donation_request])
 
+  # honeypot field - if the honeypot field has any content, then we will just
+  # redirect to the thank you page.
+  unless params[:favoriteColor].blank?
+    if @page.children.blank?
+      redirect_to "/"
+    else
+      redirect_to @page.children.first.url_normal
+    end
+    return
+  end
+
   respond_to do |format|
     if @donation_request.save
          DonationMailer.request_email(@donation_request).deliver
-         format.html { render :action => "index" }
-         format.xml  { render :xml => @donation_request, :status => :created, :location => @donation_request }
+         DonationMailer.thank_you_for_submission(@donation_request).deliver
+         format.html { 
+            if @page.children.blank?
+              redirect_to "/"
+            else
+              redirect_to @page.children.first.url_normal
+            end
+          }
+         format.xml  { render :xml => @donation_request, :status => :unprocessable_entity, :location => @donation_request }
     else
          format.html { render :action => "index" }
          format.xml  { render :xml => @donation_request.errors, :status => :unprocessable_entity }

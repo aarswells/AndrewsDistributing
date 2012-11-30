@@ -8,4 +8,8 @@ class DonationMailer < ActionMailer::Base
     
     mail(:to => region.email, :subject => "Donation Request Form Entry" )
   end
+
+  def thank_you_for_submission(donation_request)
+    mail(:to => donation_request.event_contact_email, :subject => "Thank you for your submission")
+  end
 end

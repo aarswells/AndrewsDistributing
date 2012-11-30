@@ -1141,6 +1141,40 @@ table#donation td
 	padding:5px;
 }
 
+form#new_donation_request .errorExplanation {
+  margin-top: 10px;
+  border-top: 3px solid #ffc20e;
+  background: #ffe8a4;
+}
+form#new_donation_request .errorExplanation p {
+	color:#000;
+}
+form#new_donation_request .errorExplanation li {
+	color:#000;
+}
+
+form#new_donation_request .fieldWithErrors label {
+  color: #e1e1e1;
+}
+
+form#new_donation_request .fieldWithErrors input {
+	background:#ffc20e;
+	color:#000;
+	border:#ffc20e 1px solid;
+}
+
+form#new_donation_request .fieldWithErrors textarea {
+	background:#ffc20e;
+	color:#000;
+	border:#ffc20e 1px solid;
+}
+
+form#new_donation_request .fieldWithErrors select {
+	background:#ffc20e;
+	color:#000;
+	border:#ffc20e 1px solid;
+}
+
 /* Careers */
 .iframe
 {
@@ -1520,4 +1554,8 @@ img#brandBuilding {
   position: absolute;
   right: 65px;
   top: -29px;
+}
+
+.favoriteColor {
+  display:none;
 }

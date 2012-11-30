@@ -3,12 +3,13 @@
 <% content_for :body_content_left do %>
 
 <% form_for @donation_request do |f| -%>
+  <div class="favoriteColor">
+    <input type="text" name="favoriteColor" />
+  </div>
   <%= render :partial => "/shared/admin/error_messages", :locals => {
     :object => @donation_request,
     :include_object_name => true
   } %>
-
-<% @required = FormField.last() %>
 
 <p>Please fill out the form below and an Andrews representative will contact you concerning your request as soon as possible.</p>
 <table id="donation">
@@ -18,76 +19,67 @@
 	</tr>
   <tr>
     <td  class="right"><%= f.label :event_region -%><span class="yellow">*</span></td>
-    <td><select name="donation_request[event_region]">
-				<% @regions = Region.all()%>
-				<% @regions.each do |region|%>
-					<option value="<%= region.title %>"><%= region.title %></option>
-				<% end %>
-			</select>
-		</td>
+    <td><%= f.select :event_region, Region.all.map(&:title), {:include_blank => true} %>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :event_name -%><% if @required.event_name ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_name]" id="donation_request_event_name" <% if @required.event_name ==true %> class="required" <% end %>></td>
+    <td  class="right"><%= f.label :event_name -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_name, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :event_location -%><% if @required.event_location ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_location]" id="donation_request_event_location" <% if @required.event_location ==true %> class="required" <% end %>></td>
+    <td  class="right"><%= f.label :event_location -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_location, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :event_address -%><% if @required.event_address ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><textarea rows="3" name="donation_request[event_address]" id="donation_request_event_address" cols="40" <% if @required.event_address ==true %> class="required" <% end %>></textarea></td>
+    <td  class="right"><%= f.label :event_address -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_area :event_address, :class => "required", :rows => "3", :cols => "40" %></td>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :expected_attendence, "Event Attendance" -%><% if @required.expected_attendence ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[expected_attendence]" id="donation_request_expected_attendence" <% if @required.expected_attendence ==true %> class="required" <% end %>></td>
+    <td  class="right"><%= f.label :expected_attendence, "Event Attendance" -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :expected_attendence, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :event_contact_name -%><% if @required.event_contact_name ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_contact_name]" id="donation_request_event_contact_name" <% if @required.event_contact_name ==true %> class="required" <% end %>></td>
+    <td  class="right"><%= f.label :event_contact_name -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_contact_name, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :event_contact_number -%><% if @required.event_contact_number ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_contact_number]" id="donation_request_event_contact_number" <% if @required.event_contact_number ==true %> class="required" <% end %>></td>
+    <td  class="right"><%= f.label :event_contact_number -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_contact_number, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td  class="right"><%= f.label :event_contact_email -%><% if @required.event_contact_email ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_contact_email]" id="donation_request_event_contact_email" <% if @required.event_contact_email ==true %> class="required" <% end %>></td>
+    <td  class="right"><%= f.label :event_contact_email -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_contact_email, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td class="right"><%= f.label :event_concessionaire -%><% if @required.event_concessionaire ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_concessionaire]" id="donation_request_event_concessionaire" <% if @required.event_concessionaire ==true %> class="required" <% end %>></td>
+    <td class="right"><%= f.label :event_concessionaire -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_concessionaire, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td class="right"><%= f.label :event_concessionaire_phone -%><% if @required.event_concessionaire_phone ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[event_concessionaire_phone]" id="donation_request_event_concessionaire_phone" <% if @required.event_concessionaire_phone ==true %> class="required" <% end %>></td>
+    <td class="right"><%= f.label :event_concessionaire_phone -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :event_concessionaire_phone, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
-    <td class="right"><%= f.label :charity_501c3, "Charity/501C3" -%><% if @required.charity_501c3 ==true %><span class="yellow">*</span><% end %></td>
-    <td class="input"><input type="text" size="30" name="donation_request[charity_501c3]" id="donation_request_charity_501c3" <% if @required.charity_501c3 ==true %> class="required" <% end %>></td>
+    <td class="right"><%= f.label :charity_501c3, "Charity/501C3" -%><span class="yellow">*</span></td>
+    <td class="input"><%= f.text_field :charity_501c3, :class => "required", :size => "30" %></td>
   </div>
   
   <tr>
     <td class="right"><%= f.label :wine_spirits_served -%><span class="yellow">*</span></td>
-    <td class="input"><select name="donation_request[wine_spirits_served]">
-					<option value="Yes">Yes</option>
-					<option value="No">No</option>
-			</select></td>
+    <td class="input"><%= f.select :wine_spirits_served, ["Yes", "No"], {:include_blank => true, :class => "required" } %></td>
   </div>
   
   <tr>
-    <td class="right"><%= f.label :additional_comments -%><% if @required.additional_comments ==true %><span class="yellow">*</span><% end %></td>
-    <td><textarea rows="3" name="donation_request[additional_comments]" id="donation_request_additional_comments" cols="50" <% if @required.additional_comments ==true %> class="required" <% end %>></textarea></td>
+    <td class="right"><%= f.label :additional_comments -%></td>
+    <td class="input"><%= f.text_area :additional_comments, :rows => "3", :cols => "50" %></td>
   </div>
   
   <tr>

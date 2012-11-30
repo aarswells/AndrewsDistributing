@@ -57,24 +57,13 @@ $(document).ready(function(){
 	}
 	
 	///////////// AJAX FORM SUBMITS //////////////////////
-	
-	$('.donation_requests .submit').click(function () {
-	});
-	
-	$("#new_donation_request").validate();
-
 	$("#new_inquiry").validate();
-
 	
 	// jQuery Form Plugin options
 	var myFormOptions = {
 	  success:       formAfterSubmit
 	};
 	
-	var myFormOptions2 = {
-	  success:       formAfterSubmit2
-	};
-
 	function formAfterSubmit()  {
 	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE
     $("#new_inquiry")[0].reset();
@@ -82,16 +71,7 @@ $(document).ready(function(){
 	  return false;
 	}
 	
-
-	function formAfterSubmit2()  {
-	  // PERFORM ACTIONS AFTER FORM SUBMIT HERE
-	  $("#new_donation_request")[0].reset();
-		$('.sent').show();
-	  return false;
-	}
-	
 	// Make form use jQuery Form Plugin
-	$('#new_donation_request').ajaxForm(myFormOptions2);
 	$('#new_inquiry').ajaxForm(myFormOptions);
 	
 	////////////////For Brewers/Retailers//////////////

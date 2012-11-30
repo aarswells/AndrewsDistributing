@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120116175010) do
+ActiveRecord::Schema.define(:version => 20121102204545) do
 
   create_table "alerts", :force => true do |t|
     t.string    "title"
@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(:version => 20120116175010) do
     t.integer   "position"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.datetime  "event_date"
+    t.string    "event_other"
   end
 
   add_index "donation_requests", ["id"], :name => "index_donation_requests_on_id"
@@ -121,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20120116175010) do
     t.boolean "charity_501c3"
     t.boolean "event_contact_email"
     t.boolean "additional_comments"
+    t.boolean "event_date"
   end
 
   create_table "homepage_images", :force => true do |t|
