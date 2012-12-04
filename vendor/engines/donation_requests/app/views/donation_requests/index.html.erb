@@ -1,98 +1,124 @@
 <%= render :partial => "/shared/subnav" %>
 
 <% content_for :body_content_left do %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#donation_request_event_date").datepicker({dateFormat: 'yy-m-d'});
 
-<% form_for @donation_request do |f| -%>
-  <div class="favoriteColor">
-    <input type="text" name="favoriteColor" />
-  </div>
-  <%= render :partial => "/shared/admin/error_messages", :locals => {
-    :object => @donation_request,
-    :include_object_name => true
-  } %>
+      if ($('#donation_request_event_region').val() == 'Other') {
+        $('.other').css('display', 'table-row');
+      }
 
-<p>Please fill out the form below and an Andrews representative will contact you concerning your request as soon as possible.</p>
-<table id="donation">
-  <tr>
-		<td></td>
-		<td><span class="yellow">*</span>Required</td>
-	</tr>
-  <tr>
-    <td  class="right"><%= f.label :event_region -%><span class="yellow">*</span></td>
-    <td><%= f.select :event_region, Region.all.map(&:title), {:include_blank => true} %>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :event_name -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_name, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :event_location -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_location, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :event_address -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_area :event_address, :class => "required", :rows => "3", :cols => "40" %></td>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :expected_attendence, "Event Attendance" -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :expected_attendence, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :event_contact_name -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_contact_name, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :event_contact_number -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_contact_number, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td  class="right"><%= f.label :event_contact_email -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_contact_email, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td class="right"><%= f.label :event_concessionaire -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_concessionaire, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td class="right"><%= f.label :event_concessionaire_phone -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :event_concessionaire_phone, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td class="right"><%= f.label :charity_501c3, "Charity/501C3" -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.text_field :charity_501c3, :class => "required", :size => "30" %></td>
-  </div>
-  
-  <tr>
-    <td class="right"><%= f.label :wine_spirits_served -%><span class="yellow">*</span></td>
-    <td class="input"><%= f.select :wine_spirits_served, ["Yes", "No"], {:include_blank => true, :class => "required" } %></td>
-  </div>
-  
-  <tr>
-    <td class="right"><%= f.label :additional_comments -%></td>
-    <td class="input"><%= f.text_area :additional_comments, :rows => "3", :cols => "50" %></td>
-  </div>
-  
-  <tr>
-	<td></td>
-	<td><%= f.submit "Submit", :class => "submit" %></td>
-  </tr>
-	<tr>
-		<td></td>
-		<td><div class="sent">Your donation request has been sent. Thank you.</div></td>
-	</tr>
-</table>
-<% end -%>
+      $('#donation_request_event_region').bind('change', function () {
+        var value = $(this).val(); // get selected value
+        if(value == 'Other') {
+          $('.other').css('display', 'table-row');
+        } else {
+          $('.other').css('display', 'none');
+        }
+        return false;
+      });
+    });
+  </script>
 
+  <% form_for @donation_request do |f| -%>
+    <div class="favoriteColor">
+      <input type="text" name="favoriteColor" />
+    </div>
+    <%= render :partial => "/shared/admin/error_messages", :locals => {
+      :object => @donation_request,
+      :include_object_name => true
+    } %>
+
+    <p>Please fill out the form below and an Andrews representative will contact you concerning your request as soon as possible.</p>
+    <table id="donation">
+      <tr>
+        <td></td>
+        <td><span class="yellow">*</span>Required</td>
+      </tr>
+      <tr>
+        <td  class="right"><%= f.label :event_region -%><span class="yellow">*</span></td>
+        <td><%= f.select :event_region, Region.all.map(&:title), {:include_blank => true} %>
+      </tr>
+
+      <tr class="other">
+        <td  class="right"><%= f.label :event_other, "If Other, please specify" -%></td>
+        <td class="input"><%= f.text_field :event_other, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :event_name -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_name, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :event_location -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_location, :class => "required", :size => "30" %></td>
+      </tr>
+
+      <tr>
+        <td  class="right"><%= f.label :event_date -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_date, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :event_address -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_area :event_address, :class => "required", :rows => "3", :cols => "40" %></td>
+      </tr>
+
+      <tr>
+        <td class="right"><%= f.label :event_concessionaire -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_concessionaire, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td class="right"><%= f.label :event_concessionaire_phone -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_concessionaire_phone, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :expected_attendence, "Event Attendance" -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :expected_attendence, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :event_contact_name -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_contact_name, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :event_contact_number -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_contact_number, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td  class="right"><%= f.label :event_contact_email -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :event_contact_email, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      
+      <tr>
+        <td class="right"><%= f.label :charity_501c3, "Charity/501C3" -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.text_field :charity_501c3, :class => "required", :size => "30" %></td>
+      </tr>
+      
+      <tr>
+        <td class="right"><%= f.label :wine_spirits_served -%><span class="yellow">*</span></td>
+        <td class="input"><%= f.select :wine_spirits_served, ["Yes", "No"], {:include_blank => true, :class => "required" } %></td>
+      </tr>
+      
+      <tr>
+        <td class="right"><%= f.label :additional_comments -%></td>
+        <td class="input"><%= f.text_area :additional_comments, :rows => "3", :cols => "50" %></td>
+      </tr>
+      
+      <tr>
+        <td></td>
+        <td><%= f.submit "Submit", :class => "submit" %></td>
+      </tr>
+
+    </table>
+  <% end -%>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>

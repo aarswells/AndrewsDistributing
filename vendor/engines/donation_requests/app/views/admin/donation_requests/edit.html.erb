@@ -11,6 +11,12 @@ table#requests td
     <td><%=raw @donation_request.event_region %></td>
   </tr>
   
+  <% if @donation_request.event_other.present? %>
+  <tr>
+    <td><h3>Other:</h3></td>
+    <td><%=raw @donation_request.event_other %></td>
+  </tr>
+  <% end %>
   <tr>
     <td><h3>Event Name</h3></td>
     <td><%=raw @donation_request.event_name %></td>
@@ -19,6 +25,11 @@ table#requests td
   <tr>
     <td><h3>Event Location</h3></td>
     <td><%=raw @donation_request.event_location %></td>
+  </tr>
+  
+  <tr>
+    <td><h3>Event Date</h3></td>
+    <td><%=raw @donation_request.event_date %></td>
   </tr>
   
   <tr>

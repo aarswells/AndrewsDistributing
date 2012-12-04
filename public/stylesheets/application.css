@@ -367,7 +367,7 @@ p
 	left:-5px;
 }
 
-.our-community .title_image, .donation_requests .title_image
+.our-community .title_image, .donation_requests .title_image, .thank-you--2 .title_image
 {
 	background:url('/images/our_community.png') no-repeat;
 	width:466px;
@@ -1551,11 +1551,16 @@ ul#whats_new_stories li
 
 
 img#brandBuilding {
+  display:block;
   position: absolute;
   right: 65px;
   top: -29px;
 }
 
 .favoriteColor {
+  display:none;
+}
+
+.other {
   display:none;
 }

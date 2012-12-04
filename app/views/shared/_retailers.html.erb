@@ -37,7 +37,7 @@
 			
 			if ( $.browser.msie ) {
 				$(".preview_image.retail").css({'display':'none'});
-				$(".preview_image.retail.<%= retailer.position %>").parent('.video_slide').prepend('<a class="myRetail<%= retailer.position %> flash_player" href="http://andrews.heroku.com<%= retailer.m4v_file.url %>" style="background:url(http://andrews.heroku.com<%= retailer.display_image.url %>)"><img src="http://andrews.heroku.com<%= retailer.display_image.url %>" /></a>');
+				$(".preview_image.retail.<%= retailer.position %>").parent('.video_slide').prepend('<a class="myRetail<%= retailer.position %> flash_player" href="http://198.101.212.51<%= retailer.m4v_file.url %>" style="background:url(<%= retailer.display_image.url %>)"><img src="<%= retailer.display_image.url %>" /></a>');
 				flowplayer("a.myRetail<%= retailer.position %>", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
 				// use the first frame of the video as a "splash image"
 				clip: {
@@ -48,7 +48,7 @@
 			}
 			
 			$(".preview_image.retail.<%= retailer.position %>").click(function() {
-				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= retailer.duration %>" class="video-js" width="525" height="296" poster="<%= retailer.display_image.url %>" controls style="height:296px !important"><source src="https://s3.amazonaws.com/andrews_distributing/<%= retailer.m4v_file.file_uid %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= retailer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= retailer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
+				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= retailer.duration %>" class="video-js" width="525" height="296" poster="<%= retailer.display_image.url %>" controls style="height:296px !important"><source src="http://198.101.212.51/system/resources/<%= retailer.m4v_file.file_uid %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= retailer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= retailer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
 				$(this).css({'display':'none'});
 				// Add VideoJS to all video tags on the page when the DOM is ready
 				$(this).siblings(".video-js-box").children("video").trigger("play");
@@ -57,7 +57,7 @@
 		});
 		</script>
 		<div class="video_slide <%= retailer.position %> <% if i==0%> active<% end %>" style="left:<%= position %>px;">
-			<img src="<%= retailer.display_image.url %>" herf="http://andrews.heroku.com/<%= retailer.m4v_file.url %>" width="525" height="296" class="preview_image retail <%= retailer.position %>" />
+			<img src="<%= retailer.display_image.url %>" herf="<%= retailer.m4v_file.url %>" width="525" height="296" class="preview_image retail <%= retailer.position %>" />
 			<div class="text">
 			<%=raw retailer.text %>
 			</div>

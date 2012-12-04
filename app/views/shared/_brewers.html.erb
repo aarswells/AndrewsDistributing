@@ -37,7 +37,7 @@
 			
 			if ( $.browser.msie ) {
 				$(".preview_image.brewer").css({'display':'none'});
-				$(".preview_image.brewer.<%= brewer.position %>").parent('.video_slide').prepend('<a class="myBrewer<%= brewer.position %> flash_player" href="http://andrews.heroku.com<%= brewer.m4v_file.url %>" style="background:url(http://andrews.heroku.com<%= brewer.display_image.url %>)"><img src="http://andrews.heroku.com<%= brewer.display_image.url %>" /></a>');
+				$(".preview_image.brewer.<%= brewer.position %>").parent('.video_slide').prepend('<a class="myBrewer<%= brewer.position %> flash_player" href="http://198.101.212.51<%= brewer.m4v_file.url %>" style="background:url(<%= brewer.display_image.url %>)"><img src="<%= brewer.display_image.url %>" /></a>');
 				flowplayer("a.myBrewer<%= brewer.position %>", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
 				// use the first frame of the video as a "splash image"
 				clip: {
@@ -48,7 +48,7 @@
 			}
 			
 			$(".preview_image.brewer.<%= brewer.position %>").click(function() {
-				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= brewer.duration %>" class="video-js" width="525" height="296" poster="<%= brewer.display_image.url %>" controls style="height:296px !important"><source src="https://s3.amazonaws.com/andrews_distributing/<%= brewer.m4v_file.file_uid %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= brewer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= brewer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
+				$(this).parent('.video_slide').prepend('<div class="video-js-box"><!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody --><video id="example_video_1" duration="<%= brewer.duration %>" class="video-js" width="525" height="296" poster="<%= brewer.display_image.url %>" controls style="height:296px !important"><source src="http://198.101.212.51/system/resources/<%= brewer.m4v_file.file_uid %>" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="<%= brewer.webm_file.url %>" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="<%= brewer.ogg_file.url %>" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
 				$(this).css({'display':'none'});
 				// Add VideoJS to all video tags on the page when the DOM is ready
 				$(this).siblings(".video-js-box").children("video").trigger("play");
@@ -57,7 +57,7 @@
 		});
 		</script>
 		<div class="video_slide <%= brewer.position %> <% if i==0%> active<% end %>" style="left:<%= position %>px;">
-			<img src="<%= brewer.display_image.url %>" herf="http://andrews.heroku.com/<%= brewer.m4v_file.url %>" width="525" height="296" class="preview_image brewer <%= brewer.position %>" />
+			<img src="<%= brewer.display_image.url %>" href="<%= brewer.m4v_file.url %>" width="525" height="296" class="preview_image brewer <%= brewer.position %>" />
 			<div class="text">
 			<%=raw brewer.text %>
 			</div>

@@ -7,7 +7,7 @@
 $(document).ready(function(){
 	if ( $.browser.msie ) {
 		$(".story").css({'display':'none'});
-		$(".story").parent('.holder').prepend('<a class="story_player" href="/system/resources/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEyLzUzLzM5LzkzNC9Db21wYW55SGlzdF81MjV4Mjk2Lm1vdi5tNHY/CompanyHist_525x296.mov.m4v" ><img src="/system/images/BAhbBlsHOgZmIi8yMDExLzA0LzA4LzA5LzQzLzA1Lzk2MS9Db21wYW55SGlzdG9yeS5qcGc/CompanyHistory.jpg" /></a>');
+		$(".story").parent('.holder').prepend('<a class="story_player" href="http://198.101.212.51/system/resources/BAhbBlsHOgZmIjQyMDEyLzA3LzI2LzE4XzQyXzU1XzcxMF9Db21wYW55SGlzdF81MjV4Mjk2Lm00dg/18_42_55_710_CompanyHist_525x296.m4v" ><img src="/system/images/BAhbBlsHOgZmIi8yMDExLzA0LzA4LzA5LzQzLzA1Lzk2MS9Db21wYW55SGlzdG9yeS5qcGc/CompanyHistory.jpg" /></a>');
 		flowplayer(".story_player", {src: 'http://releases.flowplayer.org/swf/flowplayer-3.2.7.swf', wmode: 'opaque'}, {
 		// use the first frame of the video as a "splash image"
 		clip: {
@@ -18,7 +18,7 @@ $(document).ready(function(){
 	}
 
 	$(".story").click(function() {
-		$(this).parent('.holder').prepend('<div class="video-js-box"><video id="example_video_1" duration="2:13" class="video-js" width="525" height="296" poster="/system/images/BAhbBlsHOgZmIi8yMDExLzA0LzA4LzA5LzQzLzA1Lzk2MS9Db21wYW55SGlzdG9yeS5qcGc/CompanyHistory.jpg" controls style="height:296px !important"><source src="https://s3.amazonaws.com/andrews_distributing/2011/04/01/12/53/39/934/CompanyHist_525x296.mov.m4v" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="/system/resources/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEzLzAyLzMyLzk5L0NvbXBhbnlIaXN0XzUyNXgyOTYubW92LndlYm0/CompanyHist_525x296.mov.webm" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="/system/resources/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEyLzQyLzUwLzkxOS9Db21wYW55SGlzdF81MjV4Mjk2Lm1vdi5vZ3Y/CompanyHist_525x296.mov.ogv" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
+		$(this).parent('.holder').prepend('<div class="video-js-box"><video id="example_video_1" duration="2:13" class="video-js" width="525" height="296" poster="/system/images/BAhbBlsHOgZmIi8yMDExLzA0LzA4LzA5LzQzLzA1Lzk2MS9Db21wYW55SGlzdG9yeS5qcGc/CompanyHistory.jpg" controls style="height:296px !important"><source src="/system/resources/18_42_55_710_CompanyHist_525x296.m4v" type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\' /><source src="/system/images/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEzLzAyLzMyLzk5L0NvbXBhbnlIaXN0XzUyNXgyOTYubW92LndlYm0/CompanyHist_525x296.mov.webm" type=\'video/webm; codecs="vp8, vorbis"\' /><source src="/system/images/BAhbBlsHOgZmIjgyMDExLzA0LzAxLzEyLzQyLzUwLzkxOS9Db21wYW55SGlzdF81MjV4Mjk2Lm1vdi5vZ3Y/CompanyHist_525x296.mov.ogv" type=\'video/ogg; codecs="theora, vorbis"\' /></video></div>');
 		$(this).css({'display':'none'});
 		// Add VideoJS to all video tags on the page when the DOM is ready
 		$(this).siblings(".video-js-box").children("video").trigger("play");

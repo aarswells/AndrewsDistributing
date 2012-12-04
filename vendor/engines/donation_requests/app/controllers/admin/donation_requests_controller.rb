@@ -1,7 +1,7 @@
 class Admin::DonationRequestsController < Admin::BaseController
 
   crudify :donation_request,
-          :title_attribute => 'event_region'
+          :title_attribute => 'event_region', :order => "created_at DESC"
 
   def toggle
     @form_field = FormField.last()

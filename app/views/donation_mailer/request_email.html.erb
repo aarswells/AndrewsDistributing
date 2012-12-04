@@ -9,8 +9,12 @@
     </p>
 	<p>
 		Event Region: <%= @donation['event_region'] %><br />
+		<% if @donation['event_other'].present? %>
+		  Other: <%= @donation['event_other'] %><br />
+		<% end %>
 		Event Name: <%= @donation['event_name'] %><br />
 		Event Location: <%= @donation['event_location'] %><br />
+		Event Date: <%= @donation['event_date'] %><br />
 		Event Address: <%= @donation['event_address'] %><br />
 		Expected Attendence: <%= @donation['expected_attendence'] %>
 	</p>
